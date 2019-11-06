@@ -2,9 +2,15 @@
 
 @section('main-content')
     <div class="row">
+        <div class="col-md-12" style="margin-bottom:3%">
+            <h1 style="font-family:auto;color:#333;display:inline;">DANH SÁCH LĨNH VỰC</h1>
+            <a href="{{ route('linh-vuc.them-moi')}}" style="float:right;">
+                <button class="au-btn au-btn-icon au-btn--blue" >
+                    <i class="zmdi zmdi-plus"></i>Thêm mới
+                </button>
+            </a>
+        </div>
         <div class="col-md-12">
-            <h1 style="font-family:auto;color:#333">DANH SÁCH LĨNH VỰC</h1>
-            <br>
             <div class="table-responsive table-responsive-data2">
                 <table class="table table-data2">
                     <thead style="background-color: #333">
@@ -21,10 +27,11 @@
                                 <td>Lĩnh vực {{ $i }}</td>
                                 <td>
                                     <div class="table-data-feature">
-                                        <a href="{{ route('linh-vuc.them-moi')}}">
+                                        <a href="">
                                             <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
                                                 <i class="zmdi zmdi-edit"></i>
-                                            </button></a>
+                                            </button>
+                                        </a>
                                         <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
                                             <i class="zmdi zmdi-delete"></i>
                                         </button>
