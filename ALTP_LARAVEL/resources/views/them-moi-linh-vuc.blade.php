@@ -9,22 +9,23 @@
                 <div class="card-header">
                     <strong>Thêm mới</strong>
                 </div>
-                <div class="card-body card-block">
-                    <form action="" method="post" class="form-inline">
+                <form action="{{ route('linh-vuc.xl-them-moi') }}" method="POST" class="form">
+                    @csrf
+                    <div class="card-body card-block">
                         <div class="form-group">
-                            <label for="exampleInputName2" class="pr-1  form-control-label">Tên lĩnh vực</label>
-                            <input type="text" id="exampleInputName2" placeholder="Ví dụ: Thể thao" required="" class="form-control">
+                            <label for="ten_linh_vuc" class="pr-1  form-control-label">Tên lĩnh vực</label>
+                            <input type="text" id="ten_linh_vuc" name="ten_linh_vuc" placeholder="Ví dụ: Thể thao" required="" class="form-control">
                         </div>
-                    </form>
-                </div>
-                <div class="card-footer">
-                    <button type="submit" class="btn btn-primary btn-sm">
-                        <i class="fa fa-dot-circle-o"></i> Submit
-                    </button>
-                    <button type="reset" class="btn btn-danger btn-sm">
-                        <i class="fa fa-ban"></i> Reset
-                    </button>
-                </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-dot-circle-o"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger btn-sm">
+                            <i class="fa fa-ban"></i> Reset
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
