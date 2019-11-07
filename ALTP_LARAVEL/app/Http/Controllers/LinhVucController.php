@@ -13,7 +13,9 @@ class LinhVucController extends Controller
      */
     public function index()
     {
-        return view('ds-linh-vuc');
+        //Load ds lĩnh vực
+        $dsLinhVuc = LinhVuc::all();
+        return view('ds-linh-vuc', compact('dsLinhVuc'));
     }
 
     /**

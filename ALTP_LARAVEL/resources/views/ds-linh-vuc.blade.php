@@ -15,16 +15,16 @@
                 <table class="table table-data2">
                     <thead style="background-color: #333">
                         <tr>
-                            <th style="color: #fff;">STT</th>
+                            <th style="color: #fff;">ID</th>
                             <th style="color: #fff;">Tên lĩnh vực</th>
                             <th style="color: #fff;"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @for($i=1; $i<20; $i++)
+                        @foreach ($dsLinhVuc as $linhVuc)
                             <tr class="tr-shadow">
-                                <td>{{ $i }}</td>
-                                <td>Lĩnh vực {{ $i }}</td>
+                                <td>{{ $linhVuc ->id }}</td>
+                                <td>{{ $linhVuc ->ten_linh_vuc }}</td>
                                 <td>
                                     <div class="table-data-feature">
                                         <a href="">
@@ -39,7 +39,7 @@
                                 </td>
                             </tr>
                             <tr class="spacer"></tr>
-                        @endfor
+                        @endforeach
                     </tbody>
                 </table>
             </div>
