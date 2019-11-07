@@ -94,8 +94,7 @@ class LinhVucController extends Controller
     {
         $linh_vuc=new LinhVuc;
         $linh_vuc=LinhVuc::find($id);
-        $linh_vuc->delete();
-        
+        $linh_vuc->delete();    
         return redirect(route('linh-vuc.danh-sach'));
 
     }
