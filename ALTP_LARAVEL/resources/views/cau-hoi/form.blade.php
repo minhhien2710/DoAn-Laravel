@@ -20,7 +20,6 @@
                         <div class="form-group">
                             <label for="linh_vuc" class=" form-control-label">Select</label>
                             <select name="linh_vuc" id="linh_vuc" class="form-control">
-                                <option>Chọn lĩnh vực</option>
                                 @foreach($dsLinhVuc as $linhVuc)
                                     <option value="{{$linhVuc->id}}">{{$linhVuc->ten_linh_vuc}}</option>
                                 @endforeach
@@ -50,6 +49,15 @@
                         <div class="form-group">
                             <label for="dap_an" class=" form-control-label">Đáp án</label>
                             <input type="text" id="dap_an" name="dap_an" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="dap_an" class=" form-control-label">Đáp án</label>
+                            <select name="dap_an" id=dap_an class="form-control" >
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                            </select>
                         </div>
                     </div>
                     <div class="card-footer">

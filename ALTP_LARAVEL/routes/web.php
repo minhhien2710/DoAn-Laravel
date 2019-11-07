@@ -44,3 +44,17 @@ Route::prefix('cau-hoi')->group(function(){
         Route::get('/xoa/{id}', 'CauHoiController@destroy')->name('xoa');
     });
 });
+Route::prefix('goi-credit')->group(function(){
+    Route::name('goi-credit.')->group(function(){
+        //Danh sách lĩnh vực
+        Route::get('/', 'GoiCreditController@index')->name('danh-sach');
+        //Thêm mới lĩnh vực
+        Route::get('/them-moi', 'GoiCreditController@create')->name('them-moi');
+        Route::post('/them-moi', 'GoiCreditController@store')->name('xu-ly-them-moi');
+        //Cập nhập lĩnh vực
+        Route::get('/cap-nhap/{id}', 'GoiCreditController@edit')->name('cap-nhap');
+        Route::post('/cap-nhap/{id}', 'GoiCreditController@update')->name('xu-ly-cap-nhap');
+        //Xoá lĩnh vực
+        Route::get('/xoa/{id}', 'GoiCreditController@destroy')->name('xoa');
+    });
+});

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\LinhVuc;
-class LinhVucController extends Controller
+use App\GoiCredit;
+class GoiCreditController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,9 +13,8 @@ class LinhVucController extends Controller
      */
     public function index()
     {
-        //Load ds lĩnh vực
-        $dsLinhVuc = LinhVuc::all();
-        return view('ds-linh-vuc', compact('dsLinhVuc'));
+        $dsGoiCredit = GoiCredit::all();
+        return view('goi-credit.ds-goi-credit', compact('dsGoiCredit'));
     }
 
     /**
@@ -25,7 +24,8 @@ class LinhVucController extends Controller
      */
     public function create()
     {
-        return view('them-moi-linh-vuc');
+        
+        return view('goi-credit.form');
     }
 
     /**
@@ -36,11 +36,12 @@ class LinhVucController extends Controller
      */
     public function store(Request $request)
     {
-        $linhVuc = new LinhVuc;
-        $linhVuc->ten_linh_vuc = $request->ten_linh_vuc;
-        $linhVuc->save();
-
-        return "Thêm lĩnh vực thành công!";
+        $GoiCredit = new GoiCredit;
+        $GoiCredit->ten_goi = $request->ten_goi;
+        $GoiCredit->credit = $request->credit;
+        $GoiCredit->so_tien = $request->so_tien;
+        $GoiCredit->save();
+        return "Thêm gói credit thành công!";
     }
 
     /**
@@ -62,9 +63,7 @@ class LinhVucController extends Controller
      */
     public function edit($id)
     {
-        //$LinhVuc=LinhVuc::find($id)
-        //return view('ThunRac')
-
+        //
     }
 
     /**
@@ -87,7 +86,6 @@ class LinhVucController extends Controller
      */
     public function destroy($id)
     {
-        //$LinhVuc=LinhVuc::find($id)
-        //$LinhVuc->delete()
+        //
     }
 }
