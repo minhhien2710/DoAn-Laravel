@@ -32,9 +32,11 @@
                                                 <i class="zmdi zmdi-edit"></i>
                                             </button>
                                         </a>
-                                        <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
-                                            <i class="zmdi zmdi-delete"></i>
-                                        </button>
+                                        <a href="{{ route('linh-vuc.xoa',($linhVuc->id)) }}">
+                                            <button type="button" class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                        </a>
                                     </div>
                                 </td>
                             </tr>

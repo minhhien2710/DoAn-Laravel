@@ -40,7 +40,7 @@ class LinhVucController extends Controller
         $linhVuc->ten_linh_vuc = $request->ten_linh_vuc;
         $linhVuc->save();
 
-        return "Thêm lĩnh vực thành công!";
+        return redirect()->Route('linh-vuc.danh-sach');
     }
 
     /**
@@ -89,5 +89,14 @@ class LinhVucController extends Controller
     {
         //$LinhVuc=LinhVuc::find($id)
         //$LinhVuc->delete()
+    }
+    public function softDeletes($id)
+    {
+        $linh_vuc=new LinhVuc;
+        $linh_vuc=LinhVuc::find($id);
+        $linh_vuc->delete();
+        
+        return redirect(route('linh-vuc.danh-sach'));
+
     }
 }

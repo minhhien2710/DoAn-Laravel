@@ -14,6 +14,10 @@
                 <a href="{{ route('cau-hoi.danh-sach') }}">
                     <i class="fas fa-chart-bar"></i>Câu hỏi</a>
             </li>
+            <li>
+                <a href="{{ route('goi-credit.danh-sach') }}">
+                    <i class="fas fa-chart-bar"></i>Gói Credit</a>
+            </li>
         </ul>
     </nav>
     <div class="ps__rail-x" style="left: 0px; bottom: 0px;">

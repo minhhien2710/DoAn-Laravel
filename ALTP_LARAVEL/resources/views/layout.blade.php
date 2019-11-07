@@ -284,23 +284,23 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="{{ asset('images/icon/avatar-01.jpg') }}" alt="John Doe">
+                                            <img src="{{ asset('images/icon/avatar-01.jpg') }}" alt="John Dog">
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="{{ asset('#') }}">john doe</a>
+                                            <a class="js-acc-btn" href="{{ asset('#') }}">john dog</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="{{ asset('#') }}">
-                                                        <img src="{{ asset('images/icon/avatar-01.jpg') }}" alt="John Doe">
+                                                        <img src="{{ asset('images/icon/avatar-01.jpg') }}" alt="John Dog">
                                                     </a>
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="{{ asset('#') }}">john doe</a>
+                                                        <a href="{{ asset('#') }}">john dog</a>
                                                     </h5>
-                                                    <span class="email">johndoe@example.com</span>
+                                                    <span class="email">johndog@example.com</span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">

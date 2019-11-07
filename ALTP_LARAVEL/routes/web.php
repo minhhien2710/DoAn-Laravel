@@ -25,8 +25,10 @@ Route::prefix('linh-vuc')->group(function(){
         //Cập nhập lĩnh vực
         Route::get('/cap-nhap/{id}', 'LinhVucController@edit')->name('cap-nhap');
         Route::post('/cap-nhap/{id}', 'LinhVucController@update')->name('xu-ly-cap-nhap');
+        
         //Xoá lĩnh vực
-        Route::get('/xoa/{id}', 'LinhVucController@destroy')->name('xoa');
+        Route::get('/xoa/{id}', 'LinhVucController@softDeletes')->name('xoa');
+        Route::get('/xoabo/{id}', 'LinhVucController@destroy')->name('xoabo');
     });
 });
 
