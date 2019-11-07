@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\CauHoi;
 use App\LinhVuc;
-class LinhVucController extends Controller
+
+class CauHoiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,9 @@ class LinhVucController extends Controller
      */
     public function index()
     {
-        return view('ds-linh-vuc');
+        //Load ds câu hỏi
+        $dsCauHoi = CauHoi::all();
+        return view('cau-hoi.danh-sach', compact('dsCauHoi'));
     }
 
     /**
@@ -23,7 +27,10 @@ class LinhVucController extends Controller
      */
     public function create()
     {
-        return view('them-moi-linh-vuc');
+        //Load ds lĩnh vực
+        $dsLinhVuc = LinhVuc::all();
+        //Load form thêm câu hỏi
+        return view('cau-hoi.form', compact('dsLinhVuc'));
     }
 
     /**
@@ -34,11 +41,17 @@ class LinhVucController extends Controller
      */
     public function store(Request $request)
     {
-        $linhVuc = new LinhVuc;
-        $linhVuc->ten_linh_vuc = $request->ten_linh_vuc;
-        $linhVuc->save();
+        $cauHoi = new CauHoi;
+        $cauHoi->noi_dung = $request->noi_dung;
+        $cauHoi->linh_vuc_id = $request->linh_vuc;
+        $cauHoi->phuong_an_a = $request->phuong_an_a;
+        $cauHoi->phuong_an_b = $request->phuong_an_b;
+        $cauHoi->phuong_an_c = $request->phuong_an_c;
+        $cauHoi->phuong_an_d = $request->phuong_an_d;
+        $cauHoi->dap_an = $request->dap_an;
+        $cauHoi->save();
 
-        return "Thêm lĩnh vực thành công!";
+        return "Thêm câu hỏi thành công!";
     }
 
     /**

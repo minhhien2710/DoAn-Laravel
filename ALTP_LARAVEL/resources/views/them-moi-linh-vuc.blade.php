@@ -9,7 +9,7 @@
                 <div class="card-header">
                     <strong>Thêm mới</strong>
                 </div>
-                <form action="{{ route('linh-vuc.xl-them-moi') }}" method="POST" class="form">
+                <form action="{{ route('linh-vuc.xu-ly-them-moi') }}" method="POST" class="form">
                     @csrf
                     <div class="card-body card-block">
                         <div class="form-group">

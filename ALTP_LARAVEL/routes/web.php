@@ -17,16 +17,30 @@ Route::get('/', function () {
 
 Route::prefix('linh-vuc')->group(function(){
     Route::name('linh-vuc.')->group(function(){
-        
-        Route::get('/', function() {
-            return view('ds-linh-vuc');
-        })->name('danh-sach');
-
-        /*Route::get('/them-moi', function() {
-            return view('them-moi-linh-vuc');
-        })->name('them-moi');*/
-
+        //Danh sách lĩnh vực
+        Route::get('/', 'LinhVucController@index')->name('danh-sach');
+        //Thêm mới lĩnh vực
+        Route::get('/them-moi', 'LinhVucController@create')->name('them-moi');
+        Route::post('/them-moi', 'LinhVucController@store')->name('xu-ly-them-moi');
+        //Cập nhập lĩnh vực
+        Route::get('/cap-nhap/{id}', 'LinhVucController@edit')->name('cap-nhap');
+        Route::post('/cap-nhap/{id}', 'LinhVucController@update')->name('xu-ly-cap-nhap');
+        //Xoá lĩnh vực
+        Route::get('/xoa/{id}', 'LinhVucController@destroy')->name('xoa');
     });
-    Route::get('them-moi','LinhVucController@create')->name('linh-vuc.them-moi');
-    Route::post('them-moi','LinhVucController@store')->name('linh-vuc.xl-them-moi');
+});
+
+Route::prefix('cau-hoi')->group(function(){
+    Route::name('cau-hoi.')->group(function(){
+        //Danh sách lĩnh vực
+        Route::get('/', 'CauHoiController@index')->name('danh-sach');
+        //Thêm mới lĩnh vực
+        Route::get('/them-moi', 'CauHoiController@create')->name('them-moi');
+        Route::post('/them-moi', 'CauHoiController@store')->name('xu-ly-them-moi');
+        //Cập nhập lĩnh vực
+        Route::get('/cap-nhap/{id}', 'CauHoiController@edit')->name('cap-nhap');
+        Route::post('/cap-nhap/{id}', 'CauHoiController@update')->name('xu-ly-cap-nhap');
+        //Xoá lĩnh vực
+        Route::get('/xoa/{id}', 'CauHoiController@destroy')->name('xoa');
+    });
 });
