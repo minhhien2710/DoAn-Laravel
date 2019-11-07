@@ -146,7 +146,7 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="{{ asset('#') }}">
+                <a href="{{ asset('/') }}">
                     <img src="{{ asset('images/icon/logo.png') }}" alt="Cool Admin">
                 </a>
             </div>

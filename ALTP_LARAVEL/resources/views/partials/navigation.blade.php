@@ -2,17 +2,17 @@
     <nav class="navbar-sidebar">
         <ul class="list-unstyled navbar__list">
             <li class="active has-sub">
-                <a class="js-arrow" href="{{ asset('#') }}">
+                <a class="js-arrow" href="{{ asset('/') }}">
                     <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                <ul class="list-unstyled navbar__sub-list js-sub-list">
-                    <li>
-                        <a href="{{ asset('index.html') }}">Dashboard 1</a>
-                    </li>
-                </ul>
             </li>
             <li>
                 <a href="{{ route('linh-vuc.danh-sach') }}">
                     <i class="fas fa-chart-bar"></i>Lĩnh vực</a>
+            </li>
+            
+            <li>
+                <a href="{{ route('cau-hoi.danh-sach') }}">
+                    <i class="fas fa-chart-bar"></i>Câu hỏi</a>
             </li>
         </ul>
     </nav>
