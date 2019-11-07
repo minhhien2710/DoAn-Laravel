@@ -2,9 +2,9 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
-    <meta name="keywords" content="au theme template">
+    <meta name="description" content="3H TEAM">
+    <meta name="author" content="3H TEAM">
+    <meta name="keywords" content="3H TEAM">
 
     <!-- Title Page-->
     <title>3H ADMIN</title>
@@ -318,7 +318,7 @@
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="{{ asset('#') }}">
+                                                <a href="{{ route('dang-xuat') }}">
                                                     <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>
