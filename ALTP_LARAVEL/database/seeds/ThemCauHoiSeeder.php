@@ -13,7 +13,6 @@ class ThemCauHoiSeeder extends Seeder
     {
        DB::table('cau_hoi')->insert([
 
-       		/*
 			['noi_dung'=>'Giải Grand Slam đầu tiên reong năm là giải nào?','linh_vuc_id'=>1,'phuong_an_a'=>'Australia mở rộng','phuong_an_b'=>'Wimbledon','phuong_an_c'=>'Roland Garos','phuong_an_d'=>'Mỹ mở rộng','dap_an'=>'Australia mở rộng'],
         	['noi_dung'=>'Cùng với Hà Nội T&T (vô địch V-League 2010), CLB nào của Việt Nam tham dự AFC Cup 2011?','linh_vuc_id'=>1,'phuong_an_a'=>'Sông Lam Nghệ An','phuong_an_b'=>'SHB Đà Nẵng','phuong_an_c'=>'Hoàng Anh Gia Lai','phuong_an_d'=>'Becamex Bình Dương','dap_an'=>''],
         	['noi_dung'=>'AFC Asian Cup 2011 được tổ chức tại quốc gia nào?','linh_vuc_id'=>1,'phuong_an_a'=>'Qatar','phuong_an_b'=>'Hàn Quốc','phuong_an_c'=>'Nhật Bản','phuong_an_d'=>'Iraq','dap_an'=>'Qatar'],
@@ -79,7 +78,7 @@ class ThemCauHoiSeeder extends Seeder
         	['noi_dung'=>'Vịnh nào sau đây không nằm trong CLB các vịnh biển đẹp nhất thế giới (World Bay)?','linh_vuc_id'=>4,'phuong_an_a'=>'Vịnh Nha Trang (Khánh Hoà)','phuong_an_b'=>'Vịnh Lăng Cô (Thừa Thiên Huế)','phuong_an_c'=>'Vịnh Xuân Đài (Phú Yên)','phuong_an_d'=>'Vịnh Hạ Long (Quảng Ninh)','dap_an'=>''],
         	['noi_dung'=>'Một hòn đảo của tỉnh Quảng Ngãi nơi được mệnh danh là "Vương quốc hành tỏi". Đó là đảo nào?','linh_vuc_id'=>4,'phuong_an_a'=>'Đảo Lý Sơn','phuong_an_b'=>'Đảo Cồn Cỏ','phuong_an_c'=>'Đảo Thổ Chu','phuong_an_d'=>'Đảo Phú Quốc','dap_an'=>''],
         	['noi_dung'=>'Châu lục nào tiếp giáp với cả Đại Tây Dương và Ấn Độ Dương?','linh_vuc_id'=>4,'phuong_an_a'=>'Châu Á','phuong_an_b'=>'Châu Phi','phuong_an_c'=>'Châu Âu','phuong_an_d'=>'Châu Mỹ ','dap_an'=>'']
-        	*/
+        
 
         	['noi_dung'=>'"Điêu tàn" là tập thơ đầu tiên của nhà thơ nào?','linh_vuc_id'=>5,'phuong_an_a'=>'Anh Thơ','phuong_an_b'=>'Thế Lữ','phuong_an_c'=>'Bích Khê','phuong_an_d'=>'Chế Lan Viên','dap_an'=>''],
         	['noi_dung'=>'Điền từ còn thiếu trong câu thành ngữ:’”…. Không cứu được …gần”.','linh_vuc_id'=>5,'phuong_an_a'=>'Lính-Tướng','phuong_an_b'=>'Chồng-Vợ','phuong_an_c'=>'Nước-Lửa','phuong_an_d'=>'Chó-Mèo','dap_an'=>''],
