@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\LinhVuc;
 
 class ThemLinhVucSeeder extends Seeder
 {
@@ -12,7 +11,7 @@ class ThemLinhVucSeeder extends Seeder
      */
     public function run()
     {
-        $data = [
+        DB::table('linh_vuc')->insert([
             ['ten_linh_vuc' => 'Thể thao'],
             ['ten_linh_vuc' => 'Lịch sử'],
             ['ten_linh_vuc' => 'Âm nhạc - Phim'],
@@ -21,10 +20,6 @@ class ThemLinhVucSeeder extends Seeder
             ['ten_linh_vuc' => 'Y học'],
             ['ten_linh_vuc' => 'Văn hoá - Sự kiện'],
             ['ten_linh_vuc' => 'Khoa học tự nhiên']
-        ];
-
-        foreach ($data as $dt) {
-            LinhVuc::create($dt);
-        }
+        ]);
     }
 }
