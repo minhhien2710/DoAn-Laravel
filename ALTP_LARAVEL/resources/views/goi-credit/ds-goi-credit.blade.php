@@ -1,10 +1,9 @@
 @extends('layout')
-
 @section('main-content')
     <div class="row">
         <div class="col-md-12" style="margin-bottom:3%">
-            <h1 style="font-family:auto;color:#333;display:inline;">DANH SÁCH LĨNH VỰC</h1>
-            <a href="{{ route('linh-vuc.them-moi') }}" style="float:right;">
+            <h1 style="font-family:auto;color:#333;display:inline;">DANH SÁCH GÓI CREDIT</h1>
+            <a href="{{ route('goi-credit.them-moi') }}" style="float:right;">
                 <button class="au-btn au-btn-icon au-btn--blue" >
                     <i class="zmdi zmdi-plus"></i>Thêm mới
                 </button>
@@ -16,15 +15,19 @@
                     <thead style="background-color: #333">
                         <tr>
                             <th style="color: #fff;">ID</th>
-                            <th style="color: #fff;">Tên lĩnh vực</th>
+                            <th style="color: #fff;">Tên gói credit</th>
+                            <th style="color: #fff;">Số credit</th>
+                            <th style="color: #fff;">Số tiền</th>
                             <th style="color: #fff;"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($dsLinhVuc as $linhVuc)
+                        @foreach ($dsGoiCredit as $credit)
                             <tr class="tr-shadow">
-                                <td>{{ $linhVuc ->id }}</td>
-                                <td>{{ $linhVuc ->ten_linh_vuc }}</td>
+                                <td>{{ $credit ->id }}</td>
+                                <td>{{ $credit ->ten_goi }}</td>
+                                <td>{{ $credit ->credit }}</td>
+                                <td>{{ $credit ->so_tien }}</td>
                                 <td>
                                     <div class="table-data-feature">
                                         <a href="">
@@ -32,11 +35,9 @@
                                                 <i class="zmdi zmdi-edit"></i>
                                             </button>
                                         </a>
-                                        <a href="{{ route('linh-vuc.xoa',($linhVuc->id)) }}">
-                                            <button type="button" class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
-                                                <i class="zmdi zmdi-delete"></i>
-                                            </button>
-                                        </a>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
                                     </div>
                                 </td>
                             </tr>

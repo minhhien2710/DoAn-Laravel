@@ -14,10 +14,16 @@
                 <a href="{{ route('cau-hoi.danh-sach') }}">
                     <i class="fas fa-chart-bar"></i>Câu hỏi</a>
             </li>
+<<<<<<< HEAD
 
             <li>
                 <a href="{{ route('user.danh-sach') }}">
                     <i class="fas fa-chart-bar"></i>Người chơi</a>
+=======
+            <li>
+                <a href="{{ route('goi-credit.danh-sach') }}">
+                    <i class="fas fa-chart-bar"></i>Gói Credit</a>
+>>>>>>> 27a2c2b4185a76d5c9af6e838f257370c5ab9213
             </li>
         </ul>
     </nav>

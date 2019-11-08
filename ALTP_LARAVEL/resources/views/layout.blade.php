@@ -2,9 +2,9 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
-    <meta name="keywords" content="au theme template">
+    <meta name="description" content="3H TEAM">
+    <meta name="author" content="3H TEAM">
+    <meta name="keywords" content="3H TEAM">
 
     <!-- Title Page-->
     <title>3H ADMIN</title>
@@ -159,11 +159,14 @@
             <!-- HEADER DESKTOP-->
             <header class="header-desktop">
                 <div class="section__content section__content--p30">
+
                     <div class="container-fluid">
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
-                                
-                                
+                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports...">
+                                <button class="au-btn--submit" type="submit">
+                                  <i class="zmdi zmdi-search"></i>
+                                </button>
                             </form>
                             <div class="header-button">
                                 <div class="noti-wrap">
@@ -281,23 +284,23 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="{{ asset('images/icon/avatar-01.jpg') }}" alt="John Doe">
+                                            <img src="{{ asset('images/icon/avatar-01.jpg') }}" alt="John Dog">
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="{{ asset('#') }}">john doe</a>
+                                            <a class="js-acc-btn" href="{{ asset('#') }}">john dog</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="{{ asset('#') }}">
-                                                        <img src="{{ asset('images/icon/avatar-01.jpg') }}" alt="John Doe">
+                                                        <img src="{{ asset('images/icon/avatar-01.jpg') }}" alt="John Dog">
                                                     </a>
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="{{ asset('#') }}">john doe</a>
+                                                        <a href="{{ asset('#') }}">john dog</a>
                                                     </h5>
-                                                    <span class="email">johndoe@example.com</span>
+                                                    <span class="email">johndog@example.com</span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
@@ -315,7 +318,7 @@
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="{{ asset('#') }}">
+                                                <a href="{{ route('dang-xuat') }}">
                                                     <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>
