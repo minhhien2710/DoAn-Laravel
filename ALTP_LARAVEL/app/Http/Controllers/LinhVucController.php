@@ -90,7 +90,7 @@ class LinhVucController extends Controller
         $linh_vuc=new LinhVuc;
         $linh_vuc=LinhVuc::onlyTrashed()->find($id);
         $linh_vuc->forceDelete();    
-        return redirect(route('linh-vuc.danh-sach-da-xoa'));
+        return redirect(route('linh-vuc.linh-vuc-da-xoa'));
     }
     public function softDeletes($id)
     {
@@ -101,7 +101,7 @@ class LinhVucController extends Controller
 
     }
     
-    public function restoreIndex($id)
+    public function restoreIndex()
     {
         $linh_vuc=LinhVuc::onlyTrashed()->get();
         return view('linh-vuc-da-xoa', compact('linh_vuc'));

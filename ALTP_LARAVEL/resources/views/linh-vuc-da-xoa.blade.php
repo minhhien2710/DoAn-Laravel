@@ -1,5 +1,4 @@
 @extends('layout')
-
 @section('main-content')
     <div class="row">
         <div class="col-md-12" style="margin-bottom:3%">
@@ -16,19 +15,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($dsLinhVuc as $linhVuc)
+                        @foreach ($linh_vuc as $linhVuc)
                             <tr class="tr-shadow">
                                 <td>{{ $linhVuc ->id }}</td>
                                 <td>{{ $linhVuc ->ten_linh_vuc }}</td>
                                 <td>
                                     <div class="table-data-feature">
-                                        <a href="">
-                                            <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
+                                        <a href="{{ route('linh-vuc.khoi-phuc',($linhVuc->id)) }}">
+                                            <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Restore">
+                                                <i class="zmdi zmdi-undo"></i>
                                             </button>
                                         </a>
-                                        <a href="{{ route('linh-vuc.xoa',($linhVuc->id)) }}">
-                                            <button type="button" class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
+                                        <a href="{{ route('linh-vuc.xoa-bo',($linhVuc->id)) }}">
+                                            <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Restore">
                                                 <i class="zmdi zmdi-delete"></i>
                                             </button>
                                         </a>

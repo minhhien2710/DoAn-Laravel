@@ -4,11 +4,20 @@
     <div class="row">
         <div class="col-md-12" style="margin-bottom:3%">
             <h1 style="font-family:auto;color:#333;display:inline;">DANH SÁCH LĨNH VỰC</h1>
-            <a href="{{ route('linh-vuc.them-moi') }}" style="float:right;">
+            <span style="float:right;">
+                <a href="{{ route('linh-vuc.them-moi') }}">
+                
                 <button class="au-btn au-btn-icon au-btn--blue" >
                     <i class="zmdi zmdi-plus"></i>Thêm mới
                 </button>
             </a>
+            <a href="{{ route('linh-vuc.linh-vuc-da-xoa') }}" >
+                <button class="au-btn au-btn-icon au-btn--green" >
+                    <i class="zmdi zmdi-plus"></i>Lĩnh Vực đã xoá
+                </button>
+            </a>
+            </span>
+            
         </div>
         <div class="col-md-12">
             <div class="table-responsive table-responsive-data2">
