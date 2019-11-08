@@ -14,6 +14,11 @@
                 <a href="{{ route('cau-hoi.danh-sach') }}">
                     <i class="fas fa-chart-bar"></i>Câu hỏi</a>
             </li>
+
+            <li>
+                <a href="{{ route('user.danh-sach') }}">
+                    <i class="fas fa-chart-bar"></i>Người chơi</a>
+            </li>
         </ul>
     </nav>
     <div class="ps__rail-x" style="left: 0px; bottom: 0px;">

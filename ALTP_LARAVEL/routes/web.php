@@ -44,3 +44,14 @@ Route::prefix('cau-hoi')->group(function(){
         Route::get('/xoa/{id}', 'CauHoiController@destroy')->name('xoa');
     });
 });
+
+Route::prefix('user')->group(function(){
+    Route::name('user.')->group(function(){
+        //Danh sách người chơi
+        Route::get('/', 'NguoiChoiController@index')->name('danh-sach');
+
+        //Thêm mới người chơi
+        Route::get('/them-moi', 'NguoiChoiController@create')->name('them-moi');
+        Route::post('/them-moi', 'NguoiChoiController@store')->name('xu-ly-them-moi');
+        });
+});
