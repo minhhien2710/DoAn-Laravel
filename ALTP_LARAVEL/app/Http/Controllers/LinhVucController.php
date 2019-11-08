@@ -62,9 +62,8 @@ class LinhVucController extends Controller
      */
     public function edit($id)
     {
-        //$LinhVuc=LinhVuc::find($id)
-        //return view('ThunRac')
-
+        $dsLinhVuc = LinhVuc::find($id);
+        return view('cap-nhat-linh-vuc', compact('dsLinhVuc'));
     }
 
     /**
@@ -76,7 +75,10 @@ class LinhVucController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dsLinhVuc = LinhVuc::find($id);
+        $dsLinhVuc->ten_linh_vuc=$request->ten_linh_vuc;
+        $dsLinhVuc->save();
+        return redirect()->route('linh-vuc.danh-sach');
     }
 
     /**

@@ -31,8 +31,8 @@ Route::middleware('auth')->group(function(){
             Route::get('/them-moi', 'LinhVucController@create')->name('them-moi');
             Route::post('/them-moi', 'LinhVucController@store')->name('xu-ly-them-moi');
             //Cập nhập lĩnh vực
-            Route::get('/cap-nhap/{id}', 'LinhVucController@edit')->name('cap-nhap');
-            Route::post('/cap-nhap/{id}', 'LinhVucController@update')->name('xu-ly-cap-nhap');
+            Route::get('/cap-nhat/{id}', 'LinhVucController@edit')->name('cap-nhat');
+            Route::post('/cap-nhat/{id}', 'LinhVucController@update')->name('xu-ly-cap-nhat');
             
             //Xoá lĩnh vực
             Route::get('/linh-vuc-da-xoa', 'LinhVucController@restoreIndex')->name('linh-vuc-da-xoa');

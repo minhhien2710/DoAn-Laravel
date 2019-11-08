@@ -36,7 +36,7 @@
                                 <td>{{ $linhVuc ->ten_linh_vuc }}</td>
                                 <td>
                                     <div class="table-data-feature">
-                                        <a href="">
+                                        <a href="{{ route('linh-vuc.cap-nhat',($linhVuc->id)) }}">
                                             <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
                                                 <i class="zmdi zmdi-edit"></i>
                                             </button>
