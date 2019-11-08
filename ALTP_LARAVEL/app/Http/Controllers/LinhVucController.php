@@ -87,7 +87,11 @@ class LinhVucController extends Controller
      */
     public function destroy($id)
     {
-        
+
+        $linh_vuc=new LinhVuc;
+        $linh_vuc=LinhVuc::onlyTrashed()->find($id);
+        $linh_vuc->forceDelete();    
+        return redirect(route('linh-vuc.danh-sach-da-xoa'));
     }
     public function softDeletes($id)
     {
@@ -96,5 +100,18 @@ class LinhVucController extends Controller
         $linh_vuc->delete();    
         return redirect(route('linh-vuc.danh-sach'));
 
+    }
+    
+    public function restoreIndex($id)
+    {
+        $linh_vuc=LinhVuc::onlyTrashed()->get();
+        return view('linh-vuc-da-xoa', compact('linh_vuc'));
+    }
+    public function restore($id)
+    {
+        $linh_vuc=new LinhVuc;
+        $linh_vuc=LinhVuc::onlyTrashed()->find($id);
+        $linh_vuc->restore();    
+        return redirect(route('linh-vuc.danh-sach'));
     }
 }
