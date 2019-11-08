@@ -35,9 +35,11 @@
                                                 <i class="zmdi zmdi-edit"></i>
                                             </button>
                                         </a>
+                                        <a href="{{ route('goi-credit.xoa',($credit->id)) }}">
                                         <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
                                             <i class="zmdi zmdi-delete"></i>
                                         </button>
+                                    </a>
                                     </div>
                                 </td>
                             </tr>

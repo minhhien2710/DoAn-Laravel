@@ -41,7 +41,7 @@ class GoiCreditController extends Controller
         $GoiCredit->credit = $request->credit;
         $GoiCredit->so_tien = $request->so_tien;
         $GoiCredit->save();
-        return "Thêm gói credit thành công!";
+        return redirect()->Route('goi-credit.danh-sach');
     }
 
     /**
@@ -87,5 +87,14 @@ class GoiCreditController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function softDeletes($id)
+    {
+        $goi_credit=new GoiCredit;
+        $goi_credit=GoiCredit::find($id);
+        $goi_credit->delete();    
+        return redirect(route('goi_credit.danh-sach'));
+
     }
 }

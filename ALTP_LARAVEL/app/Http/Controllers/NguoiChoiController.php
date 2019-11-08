@@ -43,7 +43,7 @@ class NguoiChoiController extends Controller
         $user->diem_cao_nhat = $request->diem_cao_nhat;
         $user->credit = $request->credit;
         $user->save();
-        return "Thêm người chơi thành công!";
+        return redirect()->Route('user.danh-sach');
 
     }
 
@@ -89,6 +89,15 @@ class NguoiChoiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //$LinhVuc=LinhVuc::find($id)
+        //$LinhVuc->delete()
+    }
+    public function softDeletes($id)
+    {
+        $nguoi_choi=new NguoiChoi;
+        $nguoi_choi=NguoiChoi::find($id);
+        $nguoi_choi->delete();    
+        return redirect(route('user.danh-sach'));
+
     }
 }

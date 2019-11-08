@@ -87,6 +87,7 @@ class LinhVucController extends Controller
      */
     public function destroy($id)
     {
+
         $linh_vuc=new LinhVuc;
         $linh_vuc=LinhVuc::onlyTrashed()->find($id);
         $linh_vuc->forceDelete();    
