@@ -35,8 +35,10 @@ Route::middleware('auth')->group(function(){
             Route::post('/cap-nhap/{id}', 'LinhVucController@update')->name('xu-ly-cap-nhap');
             
             //Xoá lĩnh vực
+            Route::get('/danh-sach-da-xoa/{id}', 'LinhVucController@restoreIndex')->name('danh-sach-da-xoa');
+            Route::get('/khoi-phuc/{id}', 'LinhVucController@restore')->name('khoi-phuc');
             Route::get('/xoa/{id}', 'LinhVucController@softDeletes')->name('xoa');
-            Route::get('/xoabo/{id}', 'LinhVucController@destroy')->name('xoabo');
+            Route::get('/xoa-bo/{id}', 'LinhVucController@destroy')->name('xoa-bo');
             });       
     });
 
