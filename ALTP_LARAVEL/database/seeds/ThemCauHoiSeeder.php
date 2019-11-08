@@ -12,7 +12,6 @@ class ThemCauHoiSeeder extends Seeder
     public function run()
     {
         DB::table('cau_hoi')->insert([
-
 			['noi_dung'=>'Giải Grand Slam đầu tiên reong năm là giải nào?','linh_vuc_id'=>1,'phuong_an_a'=>'Australia mở rộng','phuong_an_b'=>'Wimbledon','phuong_an_c'=>'Roland Garos','phuong_an_d'=>'Mỹ mở rộng','dap_an'=>'Australia mở rộng'],
         	['noi_dung'=>'Cùng với Hà Nội T&T (vô địch V-League 2010), CLB nào của Việt Nam tham dự AFC Cup 2011?','linh_vuc_id'=>1,'phuong_an_a'=>'Sông Lam Nghệ An','phuong_an_b'=>'SHB Đà Nẵng','phuong_an_c'=>'Hoàng Anh Gia Lai','phuong_an_d'=>'Becamex Bình Dương','dap_an'=>''],
         	['noi_dung'=>'AFC Asian Cup 2011 được tổ chức tại quốc gia nào?','linh_vuc_id'=>1,'phuong_an_a'=>'Qatar','phuong_an_b'=>'Hàn Quốc','phuong_an_c'=>'Nhật Bản','phuong_an_d'=>'Iraq','dap_an'=>'Qatar'],
@@ -25,9 +24,7 @@ class ThemCauHoiSeeder extends Seeder
         	['noi_dung'=>'Đội tuyển bóng đá nào xếp thứ ba tại World Cup 2010?','linh_vuc_id'=>1,'phuong_an_a'=>'Tây Ban Nha','phuong_an_b'=>'Hà Lan','phuong_an_c'=>'Đức','phuong_an_d'=>'Uruguay','dap_an'=>'Đức'],
         	['noi_dung'=>'Trong môn quần vợt thì một năm có bao nhiêu giải Grand Slam được tổ chức?','linh_vuc_id'=>1,'phuong_an_a'=>'3','phuong_an_b'=>'4','phuong_an_c'=>'5','phuong_an_d'=>'6','dap_an'=>'4'],
         	['noi_dung'=>'Tại thể vận hội Olympic trẻ lần 1-2010 tại Singapore, thể thao Việt Nam giành được 4 huy chương, trong đó vận động viên nào giành được huy chương vàng duy nhất?','linh_vuc_id'=>1,'phuong_an_a'=>'Thạch Kim Tuấn (cử tạ)','phuong_an_b'=>'Nguyễn Thanh Thảo (Taekwondo)','phuong_an_c'=>'Nguyễn Quốc Cương (Taekwondo)','phuong_an_d'=>'Vũ Thị Trang (cầu lồng)','dap_an'=>'Thạch Kim Tuấn (cử tạ)'],
-        	['noi_dung'=>'Nước nào là nước chủ nhà tại Copa America 2011?','linh_vuc_id'=>1,'phuong_an_a'=>'Argentina','phuong_an_b'=>'Boliviar','phuong_an_c'=>'Venezuela','phuong_an_d'=>'Paraguay','dap_an'=>'Argentina']
-
-
+        	['noi_dung'=>'Nước nào là nước chủ nhà tại Copa America 2011?','linh_vuc_id'=>1,'phuong_an_a'=>'Argentina','phuong_an_b'=>'Boliviar','phuong_an_c'=>'Venezuela','phuong_an_d'=>'Paraguay','dap_an'=>'Argentina'],
         	['noi_dung'=>'Đại Ngu là quốc hiệu của triều đại nào?','linh_vuc_id'=>2,'phuong_an_a'=>'Triều Ngô','phuong_an_b'=>'Triều Hồ','phuong_an_c'=>'Các chúa Nguyễn','phuong_an_d'=>'Nhà Tây Sơn','dap_an'=>'Triều Hồ'],
         	['noi_dung'=>'Các vua Hùng đặt quốc hiệu nước ta là gì?','linh_vuc_id'=>2,'phuong_an_a'=>'Văn Lang','phuong_an_b'=>'Âu Lạc','phuong_an_c'=>'Vạn Xuân','phuong_an_d'=>'Đại Việt','dap_an'=>'Văn Lang'],
         	['noi_dung'=>'An Dương Vương đặt quốc hiệu nước ta là gì?','linh_vuc_id'=>2,'phuong_an_a'=>'Âu Lạc','phuong_an_b'=>'Vạn Xuân','phuong_an_c'=>'Đại Cồ Việt','phuong_an_d'=>'Đại Việt','dap_an'=>'Âu Lạc'],
@@ -40,8 +37,6 @@ class ThemCauHoiSeeder extends Seeder
         	['noi_dung'=>'Hổ Quyền dưới thời nhà Nguyễn là một đấu trường của những cuộc tử chiến giữa hổ và loài động vật nào?','linh_vuc_id'=>2,'phuong_an_a'=>'Bò tót','phuong_an_b'=>'Báo','phuong_an_c'=>'Voi','phuong_an_d'=>'Chó','dap_an'=>'Voi'],
         	['noi_dung'=>'Vị tướng nào dưới thời Hai Bà Trưng là ông tổ của lò vật Mai Động?','linh_vuc_id'=>2,'phuong_an_a'=>'Ông Đông Bảng','phuong_an_b'=>'Ông Đồng','phuong_an_c'=>'Tam Trinh','phuong_an_d'=>'Đào Kỳ','dap_an'=>''],
         	['noi_dung'=>'Tập “Dư địa chí” được Nguyễn Trãi soạn dưới triều vua nào?','linh_vuc_id'=>2,'phuong_an_a'=>'Lê Thái Tổ','phuong_an_b'=>'Lê Thái Tông','phuong_an_c'=>'Lê Thánh Tông','phuong_an_d'=>'Lê Hiến Tông','dap_an'=>'Lê Thái Tông'],
-
-
         	['noi_dung'=>'Ai là nhạc sĩ Việt Nam đầu tiên viết opera với tác phẩm “Cô sao” và sau đó là “Người tạc tượng”?','linh_vuc_id'=>3,'phuong_an_a'=>'Đỗ Nhuận','phuong_an_b'=>'Hoàng Vân','phuong_an_c'=>'Trần Hoàn','phuong_an_d'=>'Trọng Đài','dap_an'=>'Đỗ Nhuận'],
         	['noi_dung'=>'The ASEAN WAY-ca khúc chính thức của ASEAN là sáng tác của nhạc sĩ người nước nào?','linh_vuc_id'=>3,'phuong_an_a'=>'Thái Lan','phuong_an_b'=>'Việt Nam','phuong_an_c'=>'Singapore','phuong_an_d'=>'Malaysia','dap_an'=>'Thái Lan'],
         	['noi_dung'=>'“Mùa con ong đi lấy mật, mùa con voi xuống sông hút nước, mùa em đi phát rẫy làm nương, anh vào rừng đặt bẫy cài chông” là những câu hát nói về tháng nào?','linh_vuc_id'=>3,'phuong_an_a'=>'Tháng Giêng','phuong_an_b'=>'Tháng hai','phuong_an_c'=>'Tháng ba','phuong_an_d'=>'Tháng tư','dap_an'=>'Tháng ba'],
@@ -56,8 +51,7 @@ class ThemCauHoiSeeder extends Seeder
         	['noi_dung'=>'Giải thưởng Emmy là giải thưởng cao quý của thể loại giải trí nào?','linh_vuc_id'=>3,'phuong_an_a'=>'Truyền hình','phuong_an_b'=>'Điện ảnh','phuong_an_c'=>'Âm nhạc','phuong_an_d'=>'Thể thao','dap_an'=>'Truyền hình'],
         	['noi_dung'=>'Bộ phim “The social Network” đạt giải gì tại lễ trao giải Quả cầu vàng lần thứ 68?','linh_vuc_id'=>3,'phuong_an_a'=>'Phim điện ảnh tâm lý/chính kịch hay nhất','phuong_an_b'=>'Phim điện ảnh hài/ca nhạc hay nhất','phuong_an_c'=>'Phim truyền hình tâm lý/chính kịch hay nhất','phuong_an_d'=>'Phim truyền hình hài/ca nhạc hay nhất','dap_an'=>'Phim điện ảnh tâm lý/chính kịch hay nhất'],
         	['noi_dung'=>'Bộ phim "W"của đạo diễn Oliver Stone viết về ai?','linh_vuc_id'=>3,'phuong_an_a'=>'Geroge Walker Bush','phuong_an_b'=>'Winston Churchil','phuong_an_c'=>'William Shakespear','phuong_an_d'=>'Walt Disney','dap_an'=>'Geroge Walker Bush'],
-        	['noi_dung'=>': “Vội vã trở về, vội vã ra đi …” là những dòng trăn trở của nhạc sĩ Phú Quang trong bài hát Hà Nội ngày trở về. Trong ca khúc này, nhạc sĩ Phú Quang đã so sánh nỗi nhớ với dòng sông nào?','linh_vuc_id'=>3,'phuong_an_a'=>'Sông Cửu Long','phuong_an_b'=>'Sông Lô','phuong_an_c'=>'Sông Hồng','phuong_an_d'=>'Sông Mã','dap_an'=>'Sông Hồng'] 
-
+        	['noi_dung'=>': “Vội vã trở về, vội vã ra đi …” là những dòng trăn trở của nhạc sĩ Phú Quang trong bài hát Hà Nội ngày trở về. Trong ca khúc này, nhạc sĩ Phú Quang đã so sánh nỗi nhớ với dòng sông nào?','linh_vuc_id'=>3,'phuong_an_a'=>'Sông Cửu Long','phuong_an_b'=>'Sông Lô','phuong_an_c'=>'Sông Hồng','phuong_an_d'=>'Sông Mã','dap_an'=>'Sông Hồng'], 
         	['noi_dung'=>'Sông Bến Hải và sông Thạch Hãn nằm ở tỉnh nào?','linh_vuc_id'=>4,'phuong_an_a'=>'Quảng Bình','phuong_an_b'=>'Quảng Ninh','phuong_an_c'=>'Quảng Trị','phuong_an_d'=>'Quảng Ngãi','dap_an'=>''],
         	['noi_dung'=>'Trong các cây cầu sau, cầu nào là cầu xoay?','linh_vuc_id'=>4,'phuong_an_a'=>'Cầu Thanh Trì','phuong_an_b'=>'Cầu Thị Nại','phuong_an_c'=>'Cầu Sông Hàn','phuong_an_d'=>'Cầu Cần Thơ','dap_an'=>''],
         	['noi_dung'=>'Bùi Hữu Nghĩa, một trong bốn rồng vàng của vùng Đồng Nai xưa (tức là toàn Nam Bộ ngày nay) là tài năng ở lĩnh vực nào?','linh_vuc_id'=>4,'phuong_an_a'=>'Hoa','phuong_an_b'=>'Phú','phuong_an_c'=>'Đàn','phuong_an_d'=>'Thi','dap_an'=>''],
@@ -77,10 +71,8 @@ class ThemCauHoiSeeder extends Seeder
         	['noi_dung'=>'Trụ sở của Ban thư ký ASEAN được đặt tại quốc gia nào sau đây?','linh_vuc_id'=>4,'phuong_an_a'=>'Thái Lan','phuong_an_b'=>'Singapore','phuong_an_c'=>'Malaysia','phuong_an_d'=>'Indonesia','dap_an'=>''],
         	['noi_dung'=>'Vịnh nào sau đây không nằm trong CLB các vịnh biển đẹp nhất thế giới (World Bay)?','linh_vuc_id'=>4,'phuong_an_a'=>'Vịnh Nha Trang (Khánh Hoà)','phuong_an_b'=>'Vịnh Lăng Cô (Thừa Thiên Huế)','phuong_an_c'=>'Vịnh Xuân Đài (Phú Yên)','phuong_an_d'=>'Vịnh Hạ Long (Quảng Ninh)','dap_an'=>''],
         	['noi_dung'=>'Một hòn đảo của tỉnh Quảng Ngãi nơi được mệnh danh là "Vương quốc hành tỏi". Đó là đảo nào?','linh_vuc_id'=>4,'phuong_an_a'=>'Đảo Lý Sơn','phuong_an_b'=>'Đảo Cồn Cỏ','phuong_an_c'=>'Đảo Thổ Chu','phuong_an_d'=>'Đảo Phú Quốc','dap_an'=>''],
-        	['noi_dung'=>'Châu lục nào tiếp giáp với cả Đại Tây Dương và Ấn Độ Dương?','linh_vuc_id'=>4,'phuong_an_a'=>'Châu Á','phuong_an_b'=>'Châu Phi','phuong_an_c'=>'Châu Âu','phuong_an_d'=>'Châu Mỹ ','dap_an'=>'']
-        
-
-        	['noi_dung'=>'"Điêu tàn" là tập thơ đầu tiên của nhà thơ nào?','linh_vuc_id'=>5,'phuong_an_a'=>'Anh Thơ','phuong_an_b'=>'Thế Lữ','phuong_an_c'=>'Bích Khê','phuong_an_d'=>'Chế Lan Viên','dap_an'=>''],
+        	['noi_dung'=>'Châu lục nào tiếp giáp với cả Đại Tây Dương và Ấn Độ Dương?','linh_vuc_id'=>4,'phuong_an_a'=>'Châu Á','phuong_an_b'=>'Châu Phi','phuong_an_c'=>'Châu Âu','phuong_an_d'=>'Châu Mỹ ','dap_an'=>''],
+           	['noi_dung'=>'"Điêu tàn" là tập thơ đầu tiên của nhà thơ nào?','linh_vuc_id'=>5,'phuong_an_a'=>'Anh Thơ','phuong_an_b'=>'Thế Lữ','phuong_an_c'=>'Bích Khê','phuong_an_d'=>'Chế Lan Viên','dap_an'=>''],
         	['noi_dung'=>'Điền từ còn thiếu trong câu thành ngữ:’”…. Không cứu được …gần”.','linh_vuc_id'=>5,'phuong_an_a'=>'Lính-Tướng','phuong_an_b'=>'Chồng-Vợ','phuong_an_c'=>'Nước-Lửa','phuong_an_d'=>'Chó-Mèo','dap_an'=>''],
         	['noi_dung'=>'Truyện “Vợ chồng A Phủ” trong tập truyện Tây Bắc của nhà văn Tô Hoài viết về người dân tộc nào?','linh_vuc_id'=>5,'phuong_an_a'=>'Vân Kiều','phuong_an_b'=>'Thái','phuong_an_c'=>'H’Mông','phuong_an_d'=>'Tày','dap_an'=>''],
         	['noi_dung'=>'Tác phẩm "Thuỷ hử" của Thi Nại Am diễn ra vào triều đại nào của Trung Quốc?','linh_vuc_id'=>5,'phuong_an_a'=>'Triều Tống','phuong_an_b'=>'Triều Nguyên ','phuong_an_c'=>'Triều Minh','phuong_an_d'=>'Triều Thanh ','dap_an'=>''],
@@ -91,8 +83,6 @@ class ThemCauHoiSeeder extends Seeder
         	['noi_dung'=>'Có câu tục ngữ"... hết bị đòn, ...còn mất vợ"? ','linh_vuc_id'=>5,'phuong_an_a'=>'Ăn','phuong_an_b'=>'Uống','phuong_an_c'=>'Ở','phuong_an_d'=>'Mặc','dap_an'=>''],
         	['noi_dung'=>'Ngọn núi nào được nhắc tới trong bài thơ "Quê mẹ" của Tố Hữu?','linh_vuc_id'=>5,'phuong_an_a'=>'Thiên Thai','phuong_an_b'=>'Ngự Bình','phuong_an_c'=>'Non Nước','phuong_an_d'=>'Hồng Lĩnh','dap_an'=>''],
         	['noi_dung'=>'Tác phẩm “Dị hương” của nhà văn Sương Nguyệt Minh đạt giải thưởng của Hội nhà văn Việt Nam năm 2010 thuộc thể loại nào?','linh_vuc_id'=>5,'phuong_an_a'=>'A. Thơ','phuong_an_b'=>'Tập truyện ngắn','phuong_an_c'=>'Tiểu thuyết','phuong_an_d'=>'Văn học dịch','dap_an'=>''],
-
-
         	['noi_dung'=>'Vai trò chính của vitamin nào là giúp cho quá trình đông máu diễn ra tốt và hạn chế lượng máu bị mất khi bị thương?','linh_vuc_id'=>6,'phuong_an_a'=>'Vitamin A','phuong_an_b'=>'Vitamin D','phuong_an_c'=>'Vitamin E','phuong_an_d'=>'Vitamin K','dap_an'=>''],
         	['noi_dung'=>'Cúm và sởi là những bệnh lây truyền qua đường nào?','linh_vuc_id'=>6,'phuong_an_a'=>'Tiêu hóa','phuong_an_b'=>'Hô hấp','phuong_an_c'=>'Sinh dục','phuong_an_d'=>'Máu','dap_an'=>''],
         	['noi_dung'=>'Virus sởi lây truyền qua đường nào?','linh_vuc_id'=>6,'phuong_an_a'=>'Tiêu hóa','phuong_an_b'=>'Hô hấp','phuong_an_c'=>'Máu','phuong_an_d'=>'Sinh dục','dap_an'=>''],
@@ -102,14 +92,12 @@ class ThemCauHoiSeeder extends Seeder
         	['noi_dung'=>'Từ nào sau đây chỉ tế bào máu?','linh_vuc_id'=>6,'phuong_an_a'=>'Huyết đồ','phuong_an_b'=>'Huyết tương','phuong_an_c'=>'Huyết thanh','phuong_an_d'=>'Huyết cầu','dap_an'=>''],
         	['noi_dung'=>'Đâu không phải là một loại tế bào máu?','linh_vuc_id'=>6,'phuong_an_a'=>'Khúc côn cầu','phuong_an_b'=>'Hồng cầu','phuong_an_c'=>'Tiểu cầu','phuong_an_d'=>'Bạch cầu ','dap_an'=>''],
         	['noi_dung'=>'Bệnh nào sau đây không phải bệnh truyền nhiễm?','linh_vuc_id'=>6,'phuong_an_a'=>'Sởi','phuong_an_b'=>'Quai bị','phuong_an_c'=>'Đậu mùa','phuong_an_d'=>'Tiểu đường','dap_an'=>''],
-
         	['noi_dung'=>'Sự kiện giờ Trái Đất, sáng kiến của WWF được tổ chức lần đầu tiên vào năm 2007 tại thành phố nào?','linh_vuc_id'=>7,'phuong_an_a'=>'Sydney','phuong_an_b'=>'Tokyo','phuong_an_c'=>'Bắc Kinh','phuong_an_d'=>'Singapore','dap_an'=>''],
         	['noi_dung'=>'Phú Yên-tỉnh đăng cai Năm du lịch quốc gia 2011 ở khu vực nào?','linh_vuc_id'=>7,'phuong_an_a'=>'Nam Trung Bộ','phuong_an_b'=>'Tây Nguyên','phuong_an_c'=>'Đông Bắc Bộ','phuong_an_d'=>'Tây Nam Bộ','dap_an'=>''],
         	['noi_dung'=>'Lễ Hội Gióng chính thức được nhận bằng Di sản văn hoá thế giới vào năm nào?','linh_vuc_id'=>7,'phuong_an_a'=>'2008','phuong_an_b'=>'2009','phuong_an_c'=>'2010','phuong_an_d'=>'2011','dap_an'=>''],
         	['noi_dung'=>'Việt Nam đã đăng cai cuộc thi sắc đẹp nào trong năm 2010?','linh_vuc_id'=>7,'phuong_an_a'=>'Hoa hậu thế giới','phuong_an_b'=>'Hoa hậu Trái Đất','phuong_an_c'=>'Hoa hậu hoàn vũ','phuong_an_d'=>'Hoa hậu quốc tế','dap_an'=>''],
         	['noi_dung'=>'Loài hoa nào được chọn là Quốc hoa của Việt Nam?','linh_vuc_id'=>7,'phuong_an_a'=>'Hoa sen','phuong_an_b'=>'Hoa mai','phuong_an_c'=>'Hoa đào','phuong_an_d'=>'Hoa hồng','dap_an'=>''],
         	['noi_dung'=>'Bánh pía là đặc sản có nguồn gốc từ tỉnh nào?','linh_vuc_id'=>7,'phuong_an_a'=>'Bến Tre','phuong_an_b'=>'Sóc Trăng','phuong_an_c'=>'Bạc Liêu','phuong_an_d'=>'Hậu Giang','dap_an'=>''],
-
         	['noi_dung'=>'Trong các hàm số lượng giác cơ bản, hàm số nào là hàm số chẵn?','linh_vuc_id'=>8,'phuong_an_a'=>'y=sinx','phuong_an_b'=>'y=cosx','phuong_an_c'=>'y-cotgx','phuong_an_d'=>'y=tgx','dap_an'=>''],
         	['noi_dung'=>'Tập hợp các số thực được ký hiệu bằng chữ cái nào?','linh_vuc_id'=>8,'phuong_an_a'=>'N (Số tự nhiên)','phuong_an_b'=>'Z (Số nguyên)','phuong_an_c'=>' Q (Số hữu tỷ)','phuong_an_d'=>'R (Số thực)','dap_an'=>''],
         	['noi_dung'=>'Khí nào chiếm 80% thành phần không khí?','linh_vuc_id'=>8,'phuong_an_a'=>'N2','phuong_an_b'=>'O2','phuong_an_c'=>'H2','phuong_an_d'=>'Cl2','dap_an'=>''],
