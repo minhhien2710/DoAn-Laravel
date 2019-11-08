@@ -48,10 +48,6 @@
 
                         <div class="form-group">
                             <label for="dap_an" class=" form-control-label">Đáp án</label>
-                            <input type="text" id="dap_an" name="dap_an" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="dap_an" class=" form-control-label">Đáp án</label>
                             <select name="dap_an" id=dap_an class="form-control" >
                                 <option value="A">A</option>
                                 <option value="B">B</option>
