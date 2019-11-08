@@ -94,7 +94,7 @@ class GoiCreditController extends Controller
         $goi_credit=new GoiCredit;
         $goi_credit=GoiCredit::find($id);
         $goi_credit->delete();    
-        return redirect(route('goi_credit.danh-sach'));
+        return redirect(route('goi-credit.danh-sach'));
 
     }
 }

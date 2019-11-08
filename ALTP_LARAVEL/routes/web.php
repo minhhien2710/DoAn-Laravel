@@ -70,7 +70,7 @@ Route::middleware('auth')->group(function(){
             Route::post('/cap-nhap/{id}', 'GoiCreditController@update')->name('xu-ly-cap-nhap');
             //Xoá lĩnh vực
             Route::get('/xoa/{id}', 'GoiCreditController@softDeletes')->name('xoa');
-            Route::get('/xoabo/{id}', 'GoiCreditController@destroy')->name('xoabo');
+            Route::get('/xoa-bo/{id}', 'GoiCreditController@destroy')->name('xoa-bo');
         });
     });
 
@@ -87,7 +87,7 @@ Route::middleware('auth')->group(function(){
         Route::post('/cap-nhap/{id}', 'NguoiChoiController@update')->name('xu-ly-cap-nhap');
         //Xoá người chơi
         Route::get('/xoa/{id}', 'NguoiChoiController@softDeletes')->name('xoa');
-        Route::get('/xoabo/{id}', 'NguoiChoiController@destroy')->name('xoabo');
+        Route::get('/xoa-bo/{id}', 'NguoiChoiController@destroy')->name('xoa-bo');
         });
 });
 });
