@@ -87,8 +87,7 @@ class LinhVucController extends Controller
      */
     public function destroy($id)
     {
-        //$LinhVuc=LinhVuc::find($id)
-        //$LinhVuc->delete()
+        
     }
     public function softDeletes($id)
     {

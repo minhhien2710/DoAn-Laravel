@@ -51,7 +51,8 @@ Route::middleware('auth')->group(function(){
             Route::get('/cap-nhap/{id}', 'CauHoiController@edit')->name('cap-nhap');
             Route::post('/cap-nhap/{id}', 'CauHoiController@update')->name('xu-ly-cap-nhap');
             //Xoá Câu hỏi
-            Route::get('/xoa/{id}', 'CauHoiController@destroy')->name('xoa');
+            Route::get('/xoa/{id}', 'CauHoiController@softDeletes')->name('xoa');
+            Route::get('/xoabo/{id}', 'CauHoiController@destroy')->name('xoabo');
         });       
     });
 
@@ -66,12 +67,12 @@ Route::middleware('auth')->group(function(){
             Route::get('/cap-nhap/{id}', 'GoiCreditController@edit')->name('cap-nhap');
             Route::post('/cap-nhap/{id}', 'GoiCreditController@update')->name('xu-ly-cap-nhap');
             //Xoá lĩnh vực
-            Route::get('/xoa/{id}', 'GoiCreditController@destroy')->name('xoa');
+            Route::get('/xoa/{id}', 'GoiCreditController@softDeletes')->name('xoa');
+            Route::get('/xoabo/{id}', 'GoiCreditController@destroy')->name('xoabo');
         });
     });
-});
 
-Route::prefix('user')->group(function(){
+    Route::prefix('user')->group(function(){
     Route::name('user.')->group(function(){
         //Danh sách người chơi
         Route::get('/', 'NguoiChoiController@index')->name('danh-sach');
@@ -79,5 +80,13 @@ Route::prefix('user')->group(function(){
         //Thêm mới người chơi
         Route::get('/them-moi', 'NguoiChoiController@create')->name('them-moi');
         Route::post('/them-moi', 'NguoiChoiController@store')->name('xu-ly-them-moi');
+        //Cập nhập người chơi
+        Route::get('/cap-nhap/{id}', 'NguoiChoiController@edit')->name('cap-nhap');
+        Route::post('/cap-nhap/{id}', 'NguoiChoiController@update')->name('xu-ly-cap-nhap');
+        //Xoá người chơi
+        Route::get('/xoa/{id}', 'NguoiChoiController@softDeletes')->name('xoa');
+        Route::get('/xoabo/{id}', 'NguoiChoiController@destroy')->name('xoabo');
         });
 });
+});
+

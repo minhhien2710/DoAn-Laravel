@@ -51,7 +51,7 @@ class CauHoiController extends Controller
         $cauHoi->dap_an = $request->dap_an;
         $cauHoi->save();
 
-        return "Thêm câu hỏi thành công!";
+        return redirect()->Route('cau-hoi.danh-sach');
     }
 
     /**
@@ -97,5 +97,14 @@ class CauHoiController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function softDeletes($id)
+    {
+        $cau_hoi=new CauHoi;
+        $cau_hoi=CauHoi::find($id);
+        $cau_hoi->delete();    
+        return redirect(route('cau-hoi.danh-sach'));
+
     }
 }

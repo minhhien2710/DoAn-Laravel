@@ -25,7 +25,7 @@ class ThemCauHoiSeeder extends Seeder
         	['noi_dung'=>'Đội tuyển bóng đá nào xếp thứ ba tại World Cup 2010?','linh_vuc_id'=>1,'phuong_an_a'=>'Tây Ban Nha','phuong_an_b'=>'Hà Lan','phuong_an_c'=>'Đức','phuong_an_d'=>'Uruguay','dap_an'=>'Đức'],
         	['noi_dung'=>'Trong môn quần vợt thì một năm có bao nhiêu giải Grand Slam được tổ chức?','linh_vuc_id'=>1,'phuong_an_a'=>'3','phuong_an_b'=>'4','phuong_an_c'=>'5','phuong_an_d'=>'6','dap_an'=>'4'],
         	['noi_dung'=>'Tại thể vận hội Olympic trẻ lần 1-2010 tại Singapore, thể thao Việt Nam giành được 4 huy chương, trong đó vận động viên nào giành được huy chương vàng duy nhất?','linh_vuc_id'=>1,'phuong_an_a'=>'Thạch Kim Tuấn (cử tạ)','phuong_an_b'=>'Nguyễn Thanh Thảo (Taekwondo)','phuong_an_c'=>'Nguyễn Quốc Cương (Taekwondo)','phuong_an_d'=>'Vũ Thị Trang (cầu lồng)','dap_an'=>'Thạch Kim Tuấn (cử tạ)'],
-        	['noi_dung'=>'Nước nào là nước chủ nhà tại Copa America 2011?','linh_vuc_id'=>1,'phuong_an_a'=>'Argentina','phuong_an_b'=>'Boliviar','phuong_an_c'=>'Venezuela','phuong_an_d'=>'Paraguay','dap_an'=>'Argentina']
+        	['noi_dung'=>'Nước nào là nước chủ nhà tại Copa America 2011?','linh_vuc_id'=>1,'phuong_an_a'=>'Argentina','phuong_an_b'=>'Boliviar','phuong_an_c'=>'Venezuela','phuong_an_d'=>'Paraguay','dap_an'=>'Argentina'],
 
 
         	['noi_dung'=>'Đại Ngu là quốc hiệu của triều đại nào?','linh_vuc_id'=>2,'phuong_an_a'=>'Triều Ngô','phuong_an_b'=>'Triều Hồ','phuong_an_c'=>'Các chúa Nguyễn','phuong_an_d'=>'Nhà Tây Sơn','dap_an'=>'Triều Hồ'],
@@ -56,7 +56,7 @@ class ThemCauHoiSeeder extends Seeder
         	['noi_dung'=>'Giải thưởng Emmy là giải thưởng cao quý của thể loại giải trí nào?','linh_vuc_id'=>3,'phuong_an_a'=>'Truyền hình','phuong_an_b'=>'Điện ảnh','phuong_an_c'=>'Âm nhạc','phuong_an_d'=>'Thể thao','dap_an'=>'Truyền hình'],
         	['noi_dung'=>'Bộ phim “The social Network” đạt giải gì tại lễ trao giải Quả cầu vàng lần thứ 68?','linh_vuc_id'=>3,'phuong_an_a'=>'Phim điện ảnh tâm lý/chính kịch hay nhất','phuong_an_b'=>'Phim điện ảnh hài/ca nhạc hay nhất','phuong_an_c'=>'Phim truyền hình tâm lý/chính kịch hay nhất','phuong_an_d'=>'Phim truyền hình hài/ca nhạc hay nhất','dap_an'=>'Phim điện ảnh tâm lý/chính kịch hay nhất'],
         	['noi_dung'=>'Bộ phim "W"của đạo diễn Oliver Stone viết về ai?','linh_vuc_id'=>3,'phuong_an_a'=>'Geroge Walker Bush','phuong_an_b'=>'Winston Churchil','phuong_an_c'=>'William Shakespear','phuong_an_d'=>'Walt Disney','dap_an'=>'Geroge Walker Bush'],
-        	['noi_dung'=>': “Vội vã trở về, vội vã ra đi …” là những dòng trăn trở của nhạc sĩ Phú Quang trong bài hát Hà Nội ngày trở về. Trong ca khúc này, nhạc sĩ Phú Quang đã so sánh nỗi nhớ với dòng sông nào?','linh_vuc_id'=>3,'phuong_an_a'=>'Sông Cửu Long','phuong_an_b'=>'Sông Lô','phuong_an_c'=>'Sông Hồng','phuong_an_d'=>'Sông Mã','dap_an'=>'Sông Hồng'] 
+        	['noi_dung'=>': “Vội vã trở về, vội vã ra đi …” là những dòng trăn trở của nhạc sĩ Phú Quang trong bài hát Hà Nội ngày trở về. Trong ca khúc này, nhạc sĩ Phú Quang đã so sánh nỗi nhớ với dòng sông nào?','linh_vuc_id'=>3,'phuong_an_a'=>'Sông Cửu Long','phuong_an_b'=>'Sông Lô','phuong_an_c'=>'Sông Hồng','phuong_an_d'=>'Sông Mã','dap_an'=>'Sông Hồng'],
 
         	['noi_dung'=>'Sông Bến Hải và sông Thạch Hãn nằm ở tỉnh nào?','linh_vuc_id'=>4,'phuong_an_a'=>'Quảng Bình','phuong_an_b'=>'Quảng Ninh','phuong_an_c'=>'Quảng Trị','phuong_an_d'=>'Quảng Ngãi','dap_an'=>''],
         	['noi_dung'=>'Trong các cây cầu sau, cầu nào là cầu xoay?','linh_vuc_id'=>4,'phuong_an_a'=>'Cầu Thanh Trì','phuong_an_b'=>'Cầu Thị Nại','phuong_an_c'=>'Cầu Sông Hàn','phuong_an_d'=>'Cầu Cần Thơ','dap_an'=>''],
@@ -77,7 +77,7 @@ class ThemCauHoiSeeder extends Seeder
         	['noi_dung'=>'Trụ sở của Ban thư ký ASEAN được đặt tại quốc gia nào sau đây?','linh_vuc_id'=>4,'phuong_an_a'=>'Thái Lan','phuong_an_b'=>'Singapore','phuong_an_c'=>'Malaysia','phuong_an_d'=>'Indonesia','dap_an'=>''],
         	['noi_dung'=>'Vịnh nào sau đây không nằm trong CLB các vịnh biển đẹp nhất thế giới (World Bay)?','linh_vuc_id'=>4,'phuong_an_a'=>'Vịnh Nha Trang (Khánh Hoà)','phuong_an_b'=>'Vịnh Lăng Cô (Thừa Thiên Huế)','phuong_an_c'=>'Vịnh Xuân Đài (Phú Yên)','phuong_an_d'=>'Vịnh Hạ Long (Quảng Ninh)','dap_an'=>''],
         	['noi_dung'=>'Một hòn đảo của tỉnh Quảng Ngãi nơi được mệnh danh là "Vương quốc hành tỏi". Đó là đảo nào?','linh_vuc_id'=>4,'phuong_an_a'=>'Đảo Lý Sơn','phuong_an_b'=>'Đảo Cồn Cỏ','phuong_an_c'=>'Đảo Thổ Chu','phuong_an_d'=>'Đảo Phú Quốc','dap_an'=>''],
-        	['noi_dung'=>'Châu lục nào tiếp giáp với cả Đại Tây Dương và Ấn Độ Dương?','linh_vuc_id'=>4,'phuong_an_a'=>'Châu Á','phuong_an_b'=>'Châu Phi','phuong_an_c'=>'Châu Âu','phuong_an_d'=>'Châu Mỹ ','dap_an'=>'']
+        	['noi_dung'=>'Châu lục nào tiếp giáp với cả Đại Tây Dương và Ấn Độ Dương?','linh_vuc_id'=>4,'phuong_an_a'=>'Châu Á','phuong_an_b'=>'Châu Phi','phuong_an_c'=>'Châu Âu','phuong_an_d'=>'Châu Mỹ ','dap_an'=>''],
         
 
         	['noi_dung'=>'"Điêu tàn" là tập thơ đầu tiên của nhà thơ nào?','linh_vuc_id'=>5,'phuong_an_a'=>'Anh Thơ','phuong_an_b'=>'Thế Lữ','phuong_an_c'=>'Bích Khê','phuong_an_d'=>'Chế Lan Viên','dap_an'=>''],
