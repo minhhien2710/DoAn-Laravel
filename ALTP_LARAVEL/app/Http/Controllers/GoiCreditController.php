@@ -63,7 +63,8 @@ class GoiCreditController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dsGoiCredit = GoiCredit::find($id);
+        return view('goi-credit.cap-nhat', compact('dsGoiCredit'));
     }
 
     /**
@@ -75,7 +76,12 @@ class GoiCreditController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $GoiCredit = GoiCredit::find($id);
+        $GoiCredit->ten_goi = $request->ten_goi;
+        $GoiCredit->credit = $request->credit;
+        $GoiCredit->so_tien = $request->so_tien;
+        $GoiCredit->save();
+        return redirect()->Route('goi-credit.danh-sach');
     }
 
     /**

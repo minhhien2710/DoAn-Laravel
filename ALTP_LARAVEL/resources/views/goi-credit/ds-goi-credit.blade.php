@@ -30,7 +30,7 @@
                                 <td>{{ $credit ->so_tien }}</td>
                                 <td>
                                     <div class="table-data-feature">
-                                        <a href="">
+                                        <a href="{{ route('goi-credit.cap-nhat',($credit->id)) }}">
                                             <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
                                                 <i class="zmdi zmdi-edit"></i>
                                             </button>

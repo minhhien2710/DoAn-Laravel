@@ -73,7 +73,9 @@ class CauHoiController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dsCauHoi = CauHoi::find($id);
+        $dsLinhVuc = LinhVuc::find($id);
+        return view('cau-hoi.cap-nhat', compact('dsCauHoi','dsLinhVuc'));
     }
 
     /**
@@ -85,7 +87,17 @@ class CauHoiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cauHoi = CauHoi::find($id);
+        $cauHoi->noi_dung = $request->noi_dung;
+        $cauHoi->linh_vuc_id = $request->linh_vuc;
+        $cauHoi->phuong_an_a = $request->phuong_an_a;
+        $cauHoi->phuong_an_b = $request->phuong_an_b;
+        $cauHoi->phuong_an_c = $request->phuong_an_c;
+        $cauHoi->phuong_an_d = $request->phuong_an_d;
+        $cauHoi->dap_an = $request->dap_an;
+        $cauHoi->save();
+
+        return redirect()->Route('cau-hoi.danh-sach');
     }
 
     /**
