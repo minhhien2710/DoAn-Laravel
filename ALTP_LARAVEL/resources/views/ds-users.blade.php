@@ -31,12 +31,12 @@
                                 <td>{{ $user ->ten_dang_nhap }}</td>
                                 <td>{{ $user ->mat_khau }}</td>
                                 <td>{{ $user ->email }}</td>
-                                <td>{{ $user ->hinh_dai_dien }}</td>
+                                <td>{{ $user ->anh_dai_dien }}</td>
                                 <td>{{ $user ->diem_cao_nhat }}</td>
                                 <td>{{ $user ->credit }}</td>
                                 <td>
                                     <div class="table-data-feature">
-                                        <a href="">
+                                        <a href="{{ route('user.cap-nhat',($user->id)) }}">
                                             <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
                                                 <i class="zmdi zmdi-edit"></i>
                                             </button>

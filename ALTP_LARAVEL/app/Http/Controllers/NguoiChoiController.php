@@ -24,7 +24,7 @@ class NguoiChoiController extends Controller
      */
     public function create()
     {
-        return view('them-moi-users');
+        return view('them-moi-user');
     }
 
     /**
@@ -66,7 +66,8 @@ class NguoiChoiController extends Controller
      */
     public function edit($id)
     {
-        //
+         $dsNguoiChoi = NguoiChoi::find($id);
+        return view('cap-nhat-user', compact('dsNguoiChoi'));
     }
 
     /**
@@ -78,7 +79,15 @@ class NguoiChoiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = NguoiChoi::find($id);
+        $user->ten_dang_nhap = $request->ten_dang_nhap;
+        $user->mat_khau = $request->mat_khau;
+        $user->email = $request->email;
+        $user->anh_dai_dien = $request->anh_dai_dien;
+        $user->diem_cao_nhat = $request->diem_cao_nhat;
+        $user->credit = $request->credit;
+        $user->save();
+        return redirect()->Route('user.danh-sach');
     }
 
     /**

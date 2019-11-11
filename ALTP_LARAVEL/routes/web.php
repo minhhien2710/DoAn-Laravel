@@ -50,8 +50,8 @@ Route::middleware('auth')->group(function(){
             Route::get('/them-moi', 'CauHoiController@create')->name('them-moi');
             Route::post('/them-moi', 'CauHoiController@store')->name('xu-ly-them-moi');
             //Cập nhập Câu hỏi
-            Route::get('/cap-nhap/{id}', 'CauHoiController@edit')->name('cap-nhap');
-            Route::post('/cap-nhap/{id}', 'CauHoiController@update')->name('xu-ly-cap-nhap');
+            Route::get('/cap-nhat/{id}', 'CauHoiController@edit')->name('cap-nhat');
+            Route::post('/cap-nhat/{id}', 'CauHoiController@update')->name('xu-ly-cap-nhat');
             //Xoá Câu hỏi
             Route::get('/xoa/{id}', 'CauHoiController@softDeletes')->name('xoa');
             Route::get('/xoabo/{id}', 'CauHoiController@destroy')->name('xoabo');
@@ -66,8 +66,8 @@ Route::middleware('auth')->group(function(){
             Route::get('/them-moi', 'GoiCreditController@create')->name('them-moi');
             Route::post('/them-moi', 'GoiCreditController@store')->name('xu-ly-them-moi');
             //Cập nhập lĩnh vực
-            Route::get('/cap-nhap/{id}', 'GoiCreditController@edit')->name('cap-nhap');
-            Route::post('/cap-nhap/{id}', 'GoiCreditController@update')->name('xu-ly-cap-nhap');
+            Route::get('/cap-nhat/{id}', 'GoiCreditController@edit')->name('cap-nhat');
+            Route::post('/cap-nhat/{id}', 'GoiCreditController@update')->name('xu-ly-cap-nhat');
             //Xoá lĩnh vực
             Route::get('/xoa/{id}', 'GoiCreditController@softDeletes')->name('xoa');
             Route::get('/xoa-bo/{id}', 'GoiCreditController@destroy')->name('xoa-bo');
@@ -83,12 +83,12 @@ Route::middleware('auth')->group(function(){
         Route::get('/them-moi', 'NguoiChoiController@create')->name('them-moi');
         Route::post('/them-moi', 'NguoiChoiController@store')->name('xu-ly-them-moi');
         //Cập nhập người chơi
-        Route::get('/cap-nhap/{id}', 'NguoiChoiController@edit')->name('cap-nhap');
-        Route::post('/cap-nhap/{id}', 'NguoiChoiController@update')->name('xu-ly-cap-nhap');
+        Route::get('/cap-nhat/{id}', 'NguoiChoiController@edit')->name('cap-nhat');
+        Route::post('/cap-nhat/{id}', 'NguoiChoiController@update')->name('xu-ly-cap-nhat');
         //Xoá người chơi
         Route::get('/xoa/{id}', 'NguoiChoiController@softDeletes')->name('xoa');
         Route::get('/xoa-bo/{id}', 'NguoiChoiController@destroy')->name('xoa-bo');
         });
-});
+    });
 });
 
