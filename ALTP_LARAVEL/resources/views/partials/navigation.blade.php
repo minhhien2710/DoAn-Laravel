@@ -24,6 +24,11 @@
                     <i class="fas fa-chart-bar"></i>Gói Credit</a>
 
             </li>
+            <li>
+                <a href="{{ route('lich-su-mua.danh-sach') }}">
+                    <i class="fas fa-chart-bar"></i>Lịch Sử Mua Credit</a>
+
+            </li>
         </ul>
     </nav>
     <div class="ps__rail-x" style="left: 0px; bottom: 0px;">

@@ -18,7 +18,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="linh_vuc" class=" form-control-label">Select</label>
+                            <label for="linh_vuc" class=" form-control-label">Chọn lĩnh vực</label>
                             <select name="linh_vuc" id="linh_vuc" class="form-control">
                                 @foreach($dsLinhVuc as $linhVuc)
                                     <option value="{{$linhVuc->id}}">{{$linhVuc->ten_linh_vuc}}</option>

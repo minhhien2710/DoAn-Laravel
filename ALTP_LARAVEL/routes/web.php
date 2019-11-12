@@ -90,5 +90,17 @@ Route::middleware('auth')->group(function(){
         Route::get('/xoa-bo/{id}', 'NguoiChoiController@destroy')->name('xoa-bo');
         });
     });
+
+    Route::prefix('lich-su-mua')->group(function(){
+    Route::name('lich-su-mua.')->group(function(){
+        //Danh sách người chơi
+        Route::get('/', 'LichSuMuaController@index')->name('danh-sach');
+
+        //Thêm mới người chơi
+        Route::get('/them-moi', 'LichSuMuaController@create')->name('them-moi');
+        Route::post('/them-moi', 'LichSuMuaController@store')->name('xu-ly-them-moi');
+
+        });
+    });
 });
 
