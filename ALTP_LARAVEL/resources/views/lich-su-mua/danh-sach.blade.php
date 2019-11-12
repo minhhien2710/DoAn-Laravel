@@ -25,24 +25,11 @@
                			@foreach ($dsLichSu as $lichsu)
                             <tr class="tr-shadow">
                                 <td>{{ $lichsu ->id }}</td>
-                                <td>{{ $lichsu ->$dsNguoiChoi->ten_dang_nhap }}</td>
-                                <td>{{ $lichsu ->$dsGoiCredit->ten_goi }}</td>
-                                <td>{{ $lichsu ->$dsGoiCredit->credit}}</td>
-                                <td>{{ $lichsu ->$dsGoiCredit->so_tien }}</td>
-                                <td>
-                                    <div class="table-data-feature">
-                                        <a href="{{ route('user.cap-nhat',($user->id)) }}">
-                                            <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
-                                            </button>
-                                        </a>
-                                        <a href="{{ route('user.xoa',($user->id)) }}">
-                                        <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
-                                            <i class="zmdi zmdi-delete"></i>
-                                        </button>
-                                    </a>
-                                    </div>
-                                </td>
+                                <td>{{ $lichsu ->NguoiChoi->ten_dang_nhap }}</td>
+                                <td>{{ $lichsu ->GoiCredit->ten_goi }}</td>
+                                <td>{{ $lichsu ->GoiCredit->credit}}</td>
+                                <td>{{ $lichsu ->GoiCredit->so_tien }}</td>
+                                
                             </tr>
                             <tr class="spacer"></tr>
                             @endforeach
