@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\QuanTriVien;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class QuanTriVienController extends Controller
 {
@@ -21,7 +22,7 @@ class QuanTriVienController extends Controller
         $mat_khau = $request->mat_khau;
 
         if(Auth::attempt(['ten_dang_nhap' => $ten_dang_nhap, 'password' => $mat_khau])){
-            return redirect()->route('trang-chu');
+            return redirect()->route('trang-chu')->with('login_success');
         }
         return "Đăng nhập thất bại!";
     }
@@ -32,6 +33,6 @@ class QuanTriVienController extends Controller
 
     public function dangXuat() {
         Auth::logout();
-        return redirect()->route('dang-nhap');
+        return redirect()->route('dang-nhap')->with('logout_success', 'Đăng xuất thành công');
     }
 }

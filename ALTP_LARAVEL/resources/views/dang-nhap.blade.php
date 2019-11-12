@@ -30,7 +30,7 @@
                                         <a href="#">Quên mật khẩu?</a>
                                     </label>
                                 </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Đăng nhập</button>
+                                <button class="au-btn au-btn--block au-btn--green m-b-20" id="btnDangNhap" type="submit">Đăng nhập</button>
                                 <div class="social-login-content">
                                     <div class="social-button">
                                         <button class="au-btn au-btn--block au-btn--blue m-b-20">Đăng nhập bằng facebook</button>

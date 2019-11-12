@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\LichSuMuaCredit;
 use App\GoiCredit;
 use App\NguoiChoi;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class LichSuMuaController extends Controller
 {

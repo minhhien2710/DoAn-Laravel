@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\LinhVuc;
+use RealRashid\SweetAlert\Facades\Alert;
 class LinhVucController extends Controller
 {
     /**

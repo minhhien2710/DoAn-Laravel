@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\NguoiChoi;
+use RealRashid\SweetAlert\Facades\Alert;
 class NguoiChoiController extends Controller
 {
     /**

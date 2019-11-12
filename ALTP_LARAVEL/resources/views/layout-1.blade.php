@@ -28,12 +28,16 @@
     <link href="{{ asset('vendor/select2/select2.min.css') }}" rel="stylesheet" media="all">
     <link href="{{ asset('vendor/perfect-scrollbar/perfect-scrollbar.css') }}" rel="stylesheet" media="all">
 
+    <!-- Sweet Alert 2-->
+    <link href="{{ asset('css/sweet-alert.css') }}" rel="stylesheet" media="all">
+
     <!-- Main CSS-->
     <link href="{{ asset('css/theme.css') }}" rel="stylesheet" media="all">
 
 </head>
 
 <body class="animsition">
+    @include('sweetalert::alert')
     @yield('main-content-1')
 
     <!-- Jquery JS-->
@@ -56,7 +60,8 @@
     <script src="{{ asset('vendor/chartjs/Chart.bundle.min.js') }}"></script>
     <script src="{{ asset('vendor/select2/select2.min.js') }}">
     </script>
-
+    <script src="{{ asset('js/sweetalert2.all.js') }}">
+    </script>
     <!-- Main JS-->
     <script src="{{ asset('js/main.js') }}"></script>
 

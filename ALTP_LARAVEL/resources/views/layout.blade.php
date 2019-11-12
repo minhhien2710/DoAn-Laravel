@@ -27,6 +27,9 @@
     <link href="{{ asset('vendor/select2/select2.min.css') }}" rel="stylesheet" media="all">
     <link href="{{ asset('vendor/perfect-scrollbar/perfect-scrollbar.css') }}" rel="stylesheet" media="all">
 
+    <!-- Sweet Alert 2-->
+    <link href="{{ asset('css/sweet-alert.css') }}" rel="stylesheet" media="all">
+
     <!-- Main CSS-->
     <link href="{{ asset('css/theme.css') }}" rel="stylesheet" media="all">
 
@@ -34,6 +37,7 @@
 @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
 
 <body class="animsition" style="animation-duration: 900ms; opacity: 1;">
+    @include('sweetalert::alert')
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
@@ -153,7 +157,6 @@
             @include('partials.navigation')
         </aside>
         <!-- END MENU SIDEBAR-->
-
         <!-- PAGE CONTAINER-->
         <div class="page-container">
             <!-- HEADER DESKTOP-->
@@ -330,7 +333,6 @@
                 </div>
             </header>
             <!-- HEADER DESKTOP-->
-
             <!-- MAIN CONTENT-->
             <div class="main-content">
                 <div class="section__content section__content--p30">
@@ -372,7 +374,8 @@
     <script src="{{ asset('vendor/chartjs/Chart.bundle.min.js') }}"></script>
     <script src="{{ asset('vendor/select2/select2.min.js') }}">
     </script>
-
+    <script src="{{ asset('js/sweetalert2.all.js') }}">
+    </script>
     <!-- Main JS-->
     <script src="{{ asset('js/main.js') }}"></script>
 
