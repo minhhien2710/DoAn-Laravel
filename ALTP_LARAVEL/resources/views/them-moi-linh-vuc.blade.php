@@ -3,6 +3,9 @@
 @section('main-content')
     <div class="row">
         <div class="col-md-12">
+            <button type="button" class="btn btn-secondary btn-sm" style="margin-bottom:1%" onclick="back_page();">
+                    <i class="fa fa-arrow-left"></i>&nbsp; Trở về
+            </button>
             <h1 style="font-family:auto;color:#333">LĨNH VỰC</h1>
             <br>
             <div class="card">
