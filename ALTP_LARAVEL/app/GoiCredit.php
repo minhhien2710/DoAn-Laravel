@@ -8,4 +8,9 @@ class GoiCredit extends Model
 {
     use SoftDeletes;
     protected $table = 'goi_credit';
+
+    public function dsLichSu()
+    {
+        return $this->hasMany('App\LichSuMuaCredit', 'goi_credit_id','id');
+    }
 }

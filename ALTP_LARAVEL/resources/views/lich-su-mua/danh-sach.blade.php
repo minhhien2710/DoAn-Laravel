@@ -15,25 +15,24 @@
                     <thead style="background-color: #333">
                         <tr>
                             <th style="color: #fff;">ID</th>
-                            <th style="color: #fff;">Tên người chơi</th>
+                            <th style="color: #fff;">Tên người chơi</th>    
                             <th style="color: #fff;">Gói Credit</th>
                             <th style="color: #fff;">Credit</th>
                             <th style="color: #fff;">Số tiền</th>
                         </tr>
                     </thead>
                     <tbody>
-               			@foreach ($dsLichSu as $lichsu)
+               			@foreach ($dsLichSu as $lichSu)
                             <tr class="tr-shadow">
-                                <td>{{ $lichsu ->id }}</td>
-                                <td>{{ $lichsu ->NguoiChoi->ten_dang_nhap }}</td>
-                                <td>{{ $lichsu ->GoiCredit->ten_goi }}</td>
-                                <td>{{ $lichsu ->GoiCredit->credit}}</td>
-                                <td>{{ $lichsu ->GoiCredit->so_tien }}</td>
-                                
+                                <td>{{ $lichSu ->id }}</td>
+                                <td>{{ $lichSu ->nguoiChoi->ten_dang_nhap }}</td>
+                                <td>{{ $lichSu ->goiCredit->ten_goi }}</td>
+                                <td>{{ $lichSu ->goiCredit->credit }}</td>
+                                <td>{{ $lichSu ->goiCredit->so_tien }}</td>
                             </tr>
                             <tr class="spacer"></tr>
-                            @endforeach
-                            </tbody>
+                        @endforeach
+                    </tbody>
                 </table>
             </div>
         </div>

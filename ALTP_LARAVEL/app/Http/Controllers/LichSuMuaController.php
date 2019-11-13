@@ -30,7 +30,7 @@ class LichSuMuaController extends Controller
     {
         $dsGoiCredit = GoiCredit::all();
         $dsNguoiChoi = NguoiChoi::all();
-        return view('lich-su-mua.them-moi', compact('dsGoiCredit','dsNguoiChoi'));
+        return view('lich-su-mua.them-moi', compact('dsGoiCredit'), compact('dsNguoiChoi'));
     }
 
     /**
