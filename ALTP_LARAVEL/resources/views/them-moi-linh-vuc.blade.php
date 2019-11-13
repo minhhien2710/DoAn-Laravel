@@ -9,6 +9,19 @@
                 <div class="card-header">
                     <strong>Thêm mới</strong>
                 </div>
+                @if($errors->any())
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
+                        <span class="badge badge-pill badge-danger">Thất bại</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <ul style="list-style-type: none;">
+                            @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <form action="{{ route('linh-vuc.xu-ly-them-moi') }}" method="POST" class="form">
                     @csrf
                     <div class="card-body card-block">
