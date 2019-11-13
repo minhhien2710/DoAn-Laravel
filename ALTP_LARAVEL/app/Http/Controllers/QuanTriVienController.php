@@ -22,7 +22,8 @@ class QuanTriVienController extends Controller
         $mat_khau = $request->mat_khau;
 
         if(Auth::attempt(['ten_dang_nhap' => $ten_dang_nhap, 'password' => $mat_khau])){
-            return redirect()->route('trang-chu')->with('login_success');
+            Alert::success('Đăng nhập thành công!', 'Nhấn OK để tiếp tục!');
+            return redirect()->route('trang-chu');
         }
         return "Đăng nhập thất bại!";
     }
@@ -33,6 +34,7 @@ class QuanTriVienController extends Controller
 
     public function dangXuat() {
         Auth::logout();
-        return redirect()->route('dang-nhap')->with('logout_success', 'Đăng xuất thành công');
+        Alert::success('Đăng xuất thành công!','');
+        return redirect()->route('dang-nhap');
     }
 }

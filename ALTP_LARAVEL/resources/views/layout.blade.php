@@ -379,8 +379,5 @@
     <!-- Main JS-->
     <script src="{{ asset('js/main.js') }}"></script>
 
-
-
-
 <!-- end document-->
 </body></html>
