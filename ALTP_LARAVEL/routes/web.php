@@ -12,7 +12,7 @@
 */
 
 //Đăng nhập
-Route::get('dang-nhap', 'QuanTriVienController@dangNhap')->name('dang-nhap');
+Route::get('dang-nhap', 'QuanTriVienController@dangNhap')->name('dang-nhap')->middleware('guest');
 Route::post('dang-nhap', 'QuanTriVienController@xuLyDangNhap')->name('xu-ly-dang-nhap');
 //Đăng xuất
 Route::get('dang-xuat', 'QuanTriVienController@dangXuat')->name('dang-xuat');
