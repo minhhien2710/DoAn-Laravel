@@ -13,7 +13,7 @@
             </a>
             <a href="{{ route('linh-vuc.linh-vuc-da-xoa') }}" >
                 <button class="au-btn au-btn-icon au-btn--green" >
-                    <i class="zmdi zmdi-plus"></i>Lĩnh Vực đã xoá
+                    <i class="fa fa-trash" aria-hidden="true"></i> Lĩnh Vực đã xoá
                 </button>
             </a>
             </span>

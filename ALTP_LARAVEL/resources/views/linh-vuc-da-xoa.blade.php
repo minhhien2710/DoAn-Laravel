@@ -2,6 +2,9 @@
 @section('main-content')
     <div class="row">
         <div class="col-md-12" style="margin-bottom:3%">
+            <button type="button" class="btn btn-secondary btn-sm" style="margin-bottom:1%" onclick="back_page();">
+                <i class="fa fa-arrow-left"></i>&nbsp; Trở về
+            </button><br>
             <h1 style="font-family:auto;color:#333;display:inline;">DANH SÁCH LĨNH VỰC ĐÃ XÓA</h1>
         </div>
         <div class="col-md-12">

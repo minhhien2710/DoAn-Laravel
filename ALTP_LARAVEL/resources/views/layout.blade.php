@@ -379,8 +379,11 @@
     <!-- Main JS-->
     <script src="{{ asset('js/main.js') }}"></script>
 
-
-
+    <script>
+        function back_page(){
+            history.back();
+        }
+    </script>
 
 <!-- end document-->
 </body></html>
