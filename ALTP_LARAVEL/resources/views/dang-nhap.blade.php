@@ -16,11 +16,11 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="ten_dang_nhap">Tài khoản</label>
-                                    <input class="au-input au-input--full" type="text" name="ten_dang_nhap" placeholder="Tên đăng nhập" required="">
+                                    <input class="au-input au-input--full" type="text" name="ten_dang_nhap" placeholder="Tên đăng nhập" >
                                 </div>
                                 <div class="form-group">
                                     <label for="mat_khau">Mật  khẩu</label>
-                                    <input class="au-input au-input--full" type="password" name="mat_khau" placeholder="Mật khẩu" required="">
+                                    <input class="au-input au-input--full" type="password" name="mat_khau" placeholder="Mật khẩu" >
                                 </div>
                                 <div class="login-checkbox">
                                     <label>
