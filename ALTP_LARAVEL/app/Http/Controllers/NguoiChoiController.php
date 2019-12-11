@@ -36,13 +36,31 @@ class NguoiChoiController extends Controller
      */
     public function store(Request $request)
     {
+        $getImages = '';
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
+
         $user = new NguoiChoi;
         $user->ten_dang_nhap = $request->ten_dang_nhap;
         $user->mat_khau = $request->mat_khau;
         $user->email = $request->email;
-        $user->anh_dai_dien = $request->anh_dai_dien;
-        $user->diem_cao_nhat = $request->diem_cao_nhat;
-        $user->credit = $request->credit;
+        if($request->hasFile('anh_dai_dien')){
+            $this->validate($request, 
+                [
+                    'anh_dai_dien' => 'mimes:jpg,jpeg,png,gif|max:2048',
+                ],			
+                [
+                    'anh_dai_dien.mimes' => 'Chỉ chấp nhận ảnh đại diện với đuôi ( jpg, jpeg, png, gif )',
+                    'anh_dai_dien.max' => 'Ảnh đại diện không được vượt quá 4MB'
+                ]
+            );
+            $anh_dai_dien = $request->file('anh_dai_dien');
+            $getImages = date('H-i-s_d-m-Y', time()).'_'.$anh_dai_dien->getClientOriginalName();
+            $destinationPath = public_path('images/avatar');
+            $anh_dai_dien->move($destinationPath, $getImages);
+        }
+        $user->anh_dai_dien = $getImages;
+        $user->diem_cao_nhat = 0;
+        $user->credit = 0;
         $user->save();
         return redirect()->Route('user.danh-sach');
 
@@ -85,8 +103,6 @@ class NguoiChoiController extends Controller
         $user->mat_khau = $request->mat_khau;
         $user->email = $request->email;
         $user->anh_dai_dien = $request->anh_dai_dien;
-        $user->diem_cao_nhat = $request->diem_cao_nhat;
-        $user->credit = $request->credit;
         $user->save();
         return redirect()->Route('user.danh-sach');
     }

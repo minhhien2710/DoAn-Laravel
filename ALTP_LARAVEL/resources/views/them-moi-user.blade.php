@@ -9,7 +9,20 @@
             <div class="card-header">
                 <strong>Thêm mới</strong>
             </div>
-            <form action="{{ route('user.xu-ly-them-moi') }}" method="POST" class="form-horizontal">
+            @if ($errors->any())
+                <div class="alert alert-danger alert-dismissible" role="alert" style="margin:1.3%;">
+                    <ul style="list-style-type: none;">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+            @endif
+            <form action="{{ route('user.xu-ly-them-moi') }}" method="POST" enctype="multipart/form-data" class="form-horizontal">
                 @csrf
                 <div class="card-body card-block">
                     <div class="form-group">
@@ -19,7 +32,7 @@
 
                     <div class="form-group">
                         <label for="mat_khau" class=" form-control-label">Mật khẩu</label>
-                        <input type="text" id="mat_khau" name="mat_khau" class="form-control">
+                        <input type="password" id="mat_khau" name="mat_khau" class="form-control">
                     </div>
 
                     <div class="form-group">
@@ -29,17 +42,7 @@
 
                     <div class="form-group">
                         <label for="anh_dai_dien" class=" form-control-label">Ảnh đại diện</label>
-                        <input type="text" id="anh_dai_dien" name="anh_dai_dien" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="diem_cao_nhat" class=" form-control-label">Điểm cao nhất</label>
-                        <input type="text" id="diem_cao_nhat" name="diem_cao_nhat" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="credit" class=" form-control-label">Số Credit</label>
-                        <input type="text" id="credit" name="credit" class="form-control">
+                        <input type="file" id="anh_dai_dien" name="anh_dai_dien" class="form-control">
                     </div>
                 </div>
                 <div class="card-footer">
