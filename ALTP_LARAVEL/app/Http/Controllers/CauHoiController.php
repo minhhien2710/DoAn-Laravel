@@ -97,7 +97,6 @@ class CauHoiController extends Controller
         $cauHoi->phuong_an_d = $request->phuong_an_d;
         $cauHoi->dap_an = $request->dap_an;
         $cauHoi->save();
-
         return redirect()->Route('cau-hoi.danh-sach');
     }
 
@@ -109,7 +108,10 @@ class CauHoiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cau_hoi=new CauHoi;
+        $cau_hoi=CauHoi::onlyTrashed()->find($id);
+        $cau_hoi->forceDelete();    
+        return redirect(route('cau-hoi.cau-hoi-da-xoa'));
     }
 
     public function softDeletes($id)
@@ -119,5 +121,18 @@ class CauHoiController extends Controller
         $cau_hoi->delete();    
         return redirect(route('cau-hoi.danh-sach'));
 
+    }
+    
+    public function restoreIndex()
+    {
+        $dsCauHoi=CauHoi::onlyTrashed()->get();
+        return view('cau-hoi.cau-hoi-da-xoa', compact('dsCauHoi'));
+    }
+    public function restore($id)
+    {
+        $cau_hoi=new CauHoi;
+        $cau_hoi=CauHoi::onlyTrashed()->find($id);
+        $cau_hoi->restore();    
+        return redirect(route('cau-hoi.danh-sach'));
     }
 }

@@ -52,22 +52,26 @@ Route::middleware('auth')->group(function(){
             Route::get('/cap-nhat/{id}', 'CauHoiController@edit')->name('cap-nhat');
             Route::post('/cap-nhat/{id}', 'CauHoiController@update')->name('xu-ly-cap-nhat');
             //Xoá Câu hỏi
+            Route::get('/cau-hoi-da-xoa', 'CauHoiController@restoreIndex')->name('cau-hoi-da-xoa');
+            Route::get('/khoi-phuc/{id}', 'CauHoiController@restore')->name('khoi-phuc');
             Route::get('/xoa/{id}', 'CauHoiController@softDeletes')->name('xoa');
-            Route::get('/xoabo/{id}', 'CauHoiController@destroy')->name('xoabo');
+            Route::get('/xoa-bo/{id}', 'CauHoiController@destroy')->name('xoa-bo');
         });       
     });
 
     Route::prefix('goi-credit')->group(function(){
         Route::name('goi-credit.')->group(function(){
-            //Danh sách lĩnh vực
+            //Danh sách gói credit
             Route::get('/', 'GoiCreditController@index')->name('danh-sach');
-            //Thêm mới lĩnh vực
+            //Thêm mới gói credit
             Route::get('/them-moi', 'GoiCreditController@create')->name('them-moi');
             Route::post('/them-moi', 'GoiCreditController@store')->name('xu-ly-them-moi');
-            //Cập nhập lĩnh vực
+            //Cập nhập gói credit
             Route::get('/cap-nhat/{id}', 'GoiCreditController@edit')->name('cap-nhat');
             Route::post('/cap-nhat/{id}', 'GoiCreditController@update')->name('xu-ly-cap-nhat');
-            //Xoá lĩnh vực
+            //Xoá gói credit
+            Route::get('/goi-credit-da-xoa', 'GoiCreditController@restoreIndex')->name('goi-credit-da-xoa');
+            Route::get('/khoi-phuc/{id}', 'GoiCreditController@restore')->name('khoi-phuc');
             Route::get('/xoa/{id}', 'GoiCreditController@softDeletes')->name('xoa');
             Route::get('/xoa-bo/{id}', 'GoiCreditController@destroy')->name('xoa-bo');
         });

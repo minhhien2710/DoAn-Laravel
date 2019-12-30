@@ -2,19 +2,10 @@
 @section('main-content')
     <div class="row">
         <div class="col-md-12" style="margin-bottom:3%">
-            <h1 style="font-family:auto;color:#333;display:inline;">DANH SÁCH GÓI CREDIT</h1>
-            <span style="float:right;">
-            <a href="{{ route('goi-credit.them-moi') }}">
-                <button class="au-btn au-btn-icon au-btn--blue" >
-                    <i class="zmdi zmdi-plus"></i>Thêm mới
-                </button>
-            </a>
-            <a href="{{ route('goi-credit.goi-credit-da-xoa') }}" >
-                <button class="au-btn au-btn-icon au-btn--green" >
-                    <i class="fa fa-trash" aria-hidden="true"></i> Gói credit đã xoá
-                </button>
-            </a>
-            </span>
+            <button type="button" class="btn btn-secondary btn-sm" style="margin-bottom:1%" onclick="back_page();">
+                <i class="fa fa-arrow-left"></i>&nbsp; Trở về
+            </button><br>
+            <h1 style="font-family:auto;color:#333;display:inline;">DANH SÁCH GÓI CREDIT ĐÃ XÓA</h1>
         </div>
         <div class="col-md-12">
             <div class="table-responsive table-responsive-data2">
@@ -37,16 +28,16 @@
                                 <td>{{ $credit ->so_tien }}</td>
                                 <td>
                                     <div class="table-data-feature">
-                                        <a href="{{ route('goi-credit.cap-nhat',($credit->id)) }}">
-                                            <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
+                                        <a href="{{ route('goi-credit.khoi-phuc',($credit->id)) }}">
+                                            <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Restore">
+                                                <i class="zmdi zmdi-undo"></i>
                                             </button>
                                         </a>
-                                        <a href="{{ route('goi-credit.xoa',($credit->id)) }}">
-                                        <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
-                                            <i class="zmdi zmdi-delete"></i>
-                                        </button>
-                                    </a>
+                                        <a href="{{ route('goi-credit.xoa-bo',($credit->id)) }}">
+                                            <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                        </a>
                                     </div>
                                 </td>
                             </tr>

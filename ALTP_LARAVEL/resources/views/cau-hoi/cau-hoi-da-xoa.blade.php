@@ -2,20 +2,10 @@
 @section('main-content')
 <div class="row">
     <div class="col-md-12" style="margin-bottom:3%">
-        <h1 style="font-family:auto;color:#333;display:inline;">DANH SÁCH CÂU HỎI</h1>
-        <span style="float:right;">
-        <a href="{{ route('cau-hoi.them-moi') }}">
-            <button class="au-btn au-btn-icon au-btn--blue" >
-                <i class="zmdi zmdi-plus"></i>Thêm mới
-            </button>
-        </a>
-        <a href="{{ route('cau-hoi.cau-hoi-da-xoa') }}" >
-            <button class="au-btn au-btn-icon au-btn--green" >
-                <i class="fa fa-trash" aria-hidden="true"></i> Câu hỏi đã xoá
-            </button>
-        </a>
-        </span>
-
+        <button type="button" class="btn btn-secondary btn-sm" style="margin-bottom:1%" onclick="back_page();">
+            <i class="fa fa-arrow-left"></i>&nbsp; Trở về
+        </button><br>
+        <h1 style="font-family:auto;color:#333;display:inline;">DANH SÁCH CÂU HỎI ĐÃ XÓA</h1>
     </div>
     <div class="col-md-12">
         <div class="table-responsive table-responsive-data2">
@@ -46,12 +36,12 @@
                         <td>{{ $cauHoi ->dap_an }}</td>
                         <td>
                             <div class="table-data-feature">
-                                <a href="{{ route('cau-hoi.cap-nhat',($cauHoi->id)) }}">
-                                    <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
-                                        <i class="zmdi zmdi-edit"></i>
+                                <a href="{{ route('cau-hoi.khoi-phuc',($cauHoi->id)) }}">
+                                    <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Restore">
+                                        <i class="zmdi zmdi-undo"></i>
                                     </button>
                                 </a>
-                                <a href="{{ route('cau-hoi.xoa',($cauHoi->id)) }}">
+                                <a href="{{ route('cau-hoi.xoa-bo',($cauHoi->id)) }}">
                                     <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
                                         <i class="zmdi zmdi-delete"></i>
                                     </button>

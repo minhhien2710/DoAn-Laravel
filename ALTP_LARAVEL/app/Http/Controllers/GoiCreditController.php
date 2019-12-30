@@ -93,7 +93,10 @@ class GoiCreditController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $goi_credit=new GoiCredit;
+        $goi_credit=GoiCredit::onlyTrashed()->find($id);
+        $goi_credit->forceDelete();    
+        return redirect(route('goi-credit.goi-credit-da-xoa'));
     }
 
     public function softDeletes($id)
@@ -103,5 +106,18 @@ class GoiCreditController extends Controller
         $goi_credit->delete();    
         return redirect(route('goi-credit.danh-sach'));
 
+    }
+
+    public function restoreIndex()
+    {
+        $dsGoiCredit=GoiCredit::onlyTrashed()->get();
+        return view('goi-credit.goi-credit-da-xoa', compact('dsGoiCredit'));
+    }
+    public function restore($id)
+    {
+        $goi_credit=new GoiCredit;
+        $goi_credit=GoiCredit::onlyTrashed()->find($id);
+        $goi_credit->restore();    
+        return redirect(route('goi-credit.danh-sach'));
     }
 }
