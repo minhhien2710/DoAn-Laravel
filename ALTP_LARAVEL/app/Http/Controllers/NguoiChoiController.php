@@ -115,15 +115,29 @@ class NguoiChoiController extends Controller
      */
     public function destroy($id)
     {
-        //$LinhVuc=LinhVuc::find($id)
-        //$LinhVuc->delete()
+        $user=new NguoiChoi;
+        $user=NguoiChoi::onlyTrashed()->find($id);
+        $user->forceDelete();    
+        return redirect(route('user.ds-users-da-xoa'));
     }
     public function softDeletes($id)
     {
-        $nguoi_choi=new NguoiChoi;
-        $nguoi_choi=NguoiChoi::find($id);
-        $nguoi_choi->delete();    
+        $user=new NguoiChoi;
+        $user=NguoiChoi::find($id);
+        $user->delete();    
         return redirect(route('user.danh-sach'));
 
+    }
+    public function restoreIndex()
+    {
+        $dsNguoiChoi=NguoiChoi::onlyTrashed()->get();
+        return view('ds-users-da-xoa', compact('dsNguoiChoi'));
+    }
+    public function restore($id)
+    {
+        $user=new NguoiChoi;
+        $user=NguoiChoi::onlyTrashed()->find($id);
+        $user->restore();    
+        return redirect(route('user.danh-sach'));
     }
 }

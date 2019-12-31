@@ -89,6 +89,8 @@ Route::middleware('auth')->group(function(){
         Route::get('/cap-nhat/{id}', 'NguoiChoiController@edit')->name('cap-nhat');
         Route::post('/cap-nhat/{id}', 'NguoiChoiController@update')->name('xu-ly-cap-nhat');
         //Xoá người chơi
+        Route::get('/ds-users-da-xoa', 'NguoiChoiController@restoreIndex')->name('ds-users-da-xoa');
+        Route::get('/khoi-phuc/{id}', 'NguoiChoiController@restore')->name('khoi-phuc');
         Route::get('/xoa/{id}', 'NguoiChoiController@softDeletes')->name('xoa');
         Route::get('/xoa-bo/{id}', 'NguoiChoiController@destroy')->name('xoa-bo');
         });
