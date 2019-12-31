@@ -18,7 +18,12 @@
             <li>
                 <a href="{{ route('user.danh-sach') }}">
                     <i class="fas fa-chart-bar"></i>Người chơi</a>
+            </li>
+            <li>
+                <a href="{{ route('luot-choi.danh-sach') }}">
+                    <i class="fas fa-chart-bar"></i>Lượt chơi</a>
 
+            </li>
             <li>
                 <a href="{{ route('goi-credit.danh-sach') }}">
                     <i class="fas fa-chart-bar"></i>Gói Credit</a>

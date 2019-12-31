@@ -93,6 +93,13 @@ Route::middleware('auth')->group(function(){
         Route::get('/xoa-bo/{id}', 'NguoiChoiController@destroy')->name('xoa-bo');
         });
     });
+    
+    Route::prefix('luot-choi')->group(function(){
+        Route::name('luot-choi.')->group(function(){
+            //Danh sách lượt chơi
+            Route::get('/', 'LuotChoiController@index')->name('danh-sach');
+        });       
+    });
 
     Route::prefix('lich-su-mua')->group(function(){
     Route::name('lich-su-mua.')->group(function(){
