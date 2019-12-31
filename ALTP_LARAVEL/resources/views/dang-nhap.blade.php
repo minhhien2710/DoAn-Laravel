@@ -35,20 +35,7 @@
                                     <label for="mat_khau">Mật  khẩu</label>
                                     <input class="au-input au-input--full" type="password" name="mat_khau" placeholder="Mật khẩu" >
                                 </div>
-                                <div class="login-checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember">Nhớ mật khẩu
-                                    </label>
-                                    <label>
-                                        <a href="#">Quên mật khẩu?</a>
-                                    </label>
-                                </div>
                                 <button class="au-btn au-btn--block au-btn--green m-b-20" id="btnDangNhap" type="submit">Đăng nhập</button>
-                                <div class="social-login-content">
-                                    <div class="social-button">
-                                        <button class="au-btn au-btn--block au-btn--blue m-b-20">Đăng nhập bằng facebook</button>
-                                    </div>
-                                </div>
                             </form>
                         </div>
                     </div>

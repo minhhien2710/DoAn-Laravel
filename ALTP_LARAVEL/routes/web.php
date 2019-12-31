@@ -103,11 +103,19 @@ Route::middleware('auth')->group(function(){
         });       
     });
 
+    Route::prefix('cau-hinh-app')->group(function(){
+        Route::name('cau-hinh-app.')->group(function(){
+            Route::get('/', 'CauHinhAppController@index')->name('cau-hinh');
+            //Cập nhập cấu hình app
+            Route::get('/cap-nhat/{id}', 'CauHinhAppController@edit')->name('cap-nhat');
+            Route::post('/cap-nhat/{id}', 'CauHinhAppController@update')->name('xu-ly-cap-nhat');
+        });
+    });
+
     Route::prefix('lich-su-mua')->group(function(){
     Route::name('lich-su-mua.')->group(function(){
         //Danh sách người chơi
         Route::get('/', 'LichSuMuaController@index')->name('danh-sach');
-
         //Thêm mới người chơi
         Route::get('/them-moi', 'LichSuMuaController@create')->name('them-moi');
         Route::post('/them-moi', 'LichSuMuaController@store')->name('xu-ly-them-moi');
@@ -115,4 +123,3 @@ Route::middleware('auth')->group(function(){
         });
     });
 });
-

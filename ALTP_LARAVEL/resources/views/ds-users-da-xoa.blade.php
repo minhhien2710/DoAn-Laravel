@@ -14,7 +14,6 @@
                         <tr>
                             <th style="color: #fff;">ID</th>
                             <th style="color: #fff;">Tên đăng nhập</th>
-                            <th style="color: #fff;">Mật khẩu</th>
                             <th style="color: #fff;">Email</th>
                             <th style="color: #fff;">Ảnh đại diện</th>
                             <th style="color: #fff;">Điểm cao nhất</th>
@@ -25,11 +24,10 @@
                     <tbody>
                         @foreach ($dsNguoiChoi as $user)
                             <tr class="tr-shadow">
-                                <td>{{ $user ->id }}</td>
+                                <td style="padding-top: 4%">{{ $user ->id }}</td>
                                 <td>{{ $user ->ten_dang_nhap }}</td>
-                                <td>{{ $user ->mat_khau }}</td>
                                 <td>{{ $user ->email }}</td>
-                                <td>{{ $user ->anh_dai_dien }}</td>
+                                <td><img src="../images/avatar/{{$user ->anh_dai_dien}}" alt="avatar" style="max-width: 100%"></td>
                                 <td>{{ $user ->diem_cao_nhat }}</td>
                                 <td>{{ $user ->credit }}</td>
                                 <td>

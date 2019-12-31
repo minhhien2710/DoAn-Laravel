@@ -7,32 +7,34 @@
             </li>
             <li>
                 <a href="{{ route('linh-vuc.danh-sach') }}">
-                    <i class="fas fa-chart-bar"></i>Lĩnh vực</a>
+                    <i class="fa fa-th-large" aria-hidden="true"></i></i>Lĩnh vực</a>
             </li>
             
             <li>
                 <a href="{{ route('cau-hoi.danh-sach') }}">
-                    <i class="fas fa-chart-bar"></i>Câu hỏi</a>
+                        <i class="fa fa-list-ol" aria-hidden="true"></i></i>Câu hỏi</a>
             </li>
 
             <li>
                 <a href="{{ route('user.danh-sach') }}">
-                    <i class="fas fa-chart-bar"></i>Người chơi</a>
+                    <i class="fa fa-user" aria-hidden="true"></i>Người chơi</a>
             </li>
             <li>
                 <a href="{{ route('luot-choi.danh-sach') }}">
-                    <i class="fas fa-chart-bar"></i>Lượt chơi</a>
+                    <i class="fa fa-th-list" aria-hidden="true"></i></i>Lượt chơi</a>
 
             </li>
             <li>
                 <a href="{{ route('goi-credit.danh-sach') }}">
-                    <i class="fas fa-chart-bar"></i>Gói Credit</a>
-
+                    <i class="fa fa-credit-card" aria-hidden="true"></i>Gói Credit</a>
             </li>
             <li>
                 <a href="{{ route('lich-su-mua.danh-sach') }}">
-                    <i class="fas fa-chart-bar"></i>Lịch Sử Mua Credit</a>
-
+                    <i class="fa fa-history" aria-hidden="true"></i>Lịch Sử Mua Credit</a>
+            </li>
+            <li>
+                <a href="{{ route('cau-hinh-app.cau-hinh') }}">
+                    <i class="fa fa-cog" aria-hidden="true"></i>Cấu Hình App</a>
             </li>
         </ul>
     </nav>
