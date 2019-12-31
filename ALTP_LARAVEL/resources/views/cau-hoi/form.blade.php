@@ -55,6 +55,14 @@
                                 <option value="D">D</option>
                             </select>
                         </div>
+
+                        <div class="form-group">
+                            <label for="do_kho" class=" form-control-label">Độ khó</label>
+                            <select name="do_kho" id=do_kho class="form-control" >
+                                <option value="1">Dễ</option>
+                                <option value="2">Khó</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary btn-sm">

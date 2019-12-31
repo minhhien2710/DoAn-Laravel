@@ -35,6 +35,11 @@
                         <td>{{ $cauHoi ->phuong_an_d }}</td>
                         <td>{{ $cauHoi ->dap_an }}</td>
                         <td>
+                            @if($cauHoi ->do_kho ==1) Dễ
+                            @else Khó
+                            @endif
+                        </td>
+                        <td>
                             <div class="table-data-feature">
                                 <a href="{{ route('cau-hoi.khoi-phuc',($cauHoi->id)) }}">
                                     <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Restore">

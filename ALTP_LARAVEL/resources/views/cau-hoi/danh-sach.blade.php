@@ -30,6 +30,7 @@
                         <th style="color: #fff;">Phương án C</th>
                         <th style="color: #fff;">Phương án D</th>
                         <th style="color: #fff;">Đáp án</th>
+                        <th style="color: #fff;">Độ khó</th>
                         <th style="color: #fff;"></th>
                     </tr>
                 </thead>
@@ -44,6 +45,11 @@
                         <td>{{ $cauHoi ->phuong_an_c }}</td>
                         <td>{{ $cauHoi ->phuong_an_d }}</td>
                         <td>{{ $cauHoi ->dap_an }}</td>
+                        <td>
+                            @if($cauHoi ->do_kho ==1) Dễ
+                            @else Khó
+                            @endif
+                        </td>
                         <td>
                             <div class="table-data-feature">
                                 <a href="{{ route('cau-hoi.cap-nhat',($cauHoi->id)) }}">
