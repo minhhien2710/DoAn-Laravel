@@ -3,13 +3,29 @@
 @section('main-content')
     <div class="row">
         <div class="col-md-12">
+            <button type="button" class="btn btn-secondary btn-sm" style="margin-bottom:1%" onclick="back_page();">
+                <i class="fa fa-arrow-left"></i>&nbsp; Trở về
+            </button><br>
             <h1 style="font-family:auto;color:#333">CÂU HỎI</h1>
             <br>
             <div class="card">
                 <div class="card-header">
                     <strong>Thêm mới</strong>
                 </div>
-            <form action="{{ route('cau-hoi.xu-ly-them-moi') }}" method="POST" class="form-horizontal">
+                @if($errors->any())
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
+                        <span class="badge badge-pill badge-danger">Thất bại</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <ul style="list-style-type: none;">
+                            @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <form action="{{ route('cau-hoi.xu-ly-them-moi') }}" method="POST" class="form-horizontal">
                     @csrf
                     <div class="card-body card-block">
                         <div class="form-group">
