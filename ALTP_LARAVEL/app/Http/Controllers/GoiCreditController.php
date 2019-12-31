@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\GoiCredit;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Http\Requests\GoiCreditRequest;
 class GoiCreditController extends Controller
 {
     /**
@@ -35,7 +36,7 @@ class GoiCreditController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GoiCreditRequest $request)
     {
         $GoiCredit = new GoiCredit;
         $GoiCredit->ten_goi = $request->ten_goi;

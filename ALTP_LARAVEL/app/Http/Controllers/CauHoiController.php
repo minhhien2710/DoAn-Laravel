@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\CauHoi;
 use App\LinhVuc;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Http\Requests\ThemCauHoiRequest;
 
 class CauHoiController extends Controller
 {
@@ -40,7 +41,7 @@ class CauHoiController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ThemCauHoiRequest $request)
     {
         $cauHoi = new CauHoi;
         $cauHoi->noi_dung = $request->noi_dung;

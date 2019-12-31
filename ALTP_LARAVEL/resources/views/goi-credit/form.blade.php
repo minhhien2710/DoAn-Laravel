@@ -9,10 +9,23 @@
             <h1 style="font-family:auto;color:#333">GÓI CREDIT</h1>
             <br>
             <div class="card">
-                <div class="card">
-                    <div class="card-header">
+                <div class="card-header">
                     <strong>Thêm mới</strong>
-                </div><form action="{{ route('goi-credit.xu-ly-them-moi') }}" method="POST" class="form-horizontal">
+                </div>
+                @if($errors->any())
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
+                        <span class="badge badge-pill badge-danger">Thất bại</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <ul style="list-style-type: none;">
+                            @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <form action="{{ route('goi-credit.xu-ly-them-moi') }}" method="POST" class="form-horizontal">
                             @csrf
                     <div class="card-body card-block">
                         
