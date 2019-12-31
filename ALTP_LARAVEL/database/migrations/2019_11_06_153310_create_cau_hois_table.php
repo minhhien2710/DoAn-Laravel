@@ -22,6 +22,7 @@ class CreateCauHoisTable extends Migration
             $table->text('phuong_an_c');
             $table->text('phuong_an_d');
             $table->text('dap_an');
+            $table->integer('do_kho');
             $table->timestamps();
             $table->softDeletes();
         });

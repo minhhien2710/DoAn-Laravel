@@ -14,12 +14,9 @@ class ThemLinhVucSeeder extends Seeder
         DB::table('linh_vuc')->insert([
             ['ten_linh_vuc' => 'Thể thao'],
             ['ten_linh_vuc' => 'Lịch sử'],
-            ['ten_linh_vuc' => 'Âm nhạc - Phim'],
             ['ten_linh_vuc' => 'Địa lý'],
             ['ten_linh_vuc' => 'Văn học'],
-            ['ten_linh_vuc' => 'Y học'],
-            ['ten_linh_vuc' => 'Văn hoá - Sự kiện'],
-            ['ten_linh_vuc' => 'Khoa học tự nhiên']
+            ['ten_linh_vuc' => 'Âm nhạc']
         ]);
     }
 }
