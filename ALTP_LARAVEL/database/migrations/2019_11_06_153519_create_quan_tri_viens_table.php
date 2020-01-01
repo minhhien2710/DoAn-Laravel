@@ -18,6 +18,7 @@ class CreateQuanTriViensTable extends Migration
             $table->string('ten_dang_nhap');
             $table->string('mat_khau');
             $table->string('ho_ten');
+            $table->string('anh_dai_dien');
             $table->timestamps();
             $table->softDeletes();
         });

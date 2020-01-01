@@ -22,6 +22,25 @@ Route::middleware('auth')->group(function(){
         return view('layout');
     })->name('trang-chu');
 
+    Route::prefix('quan-tri-vien')->group(function(){
+        Route::name('quan-tri-vien.')->group(function(){
+            //Danh sách admin
+            Route::get('/', 'QuanTriVienController@index')->name('danh-sach');
+    
+            //Thêm mới admin
+            Route::get('/them-moi', 'QuanTriVienController@create')->name('them-moi');
+            Route::post('/them-moi', 'QuanTriVienController@store')->name('xu-ly-them-moi');
+            //Cập nhập admin
+            Route::get('/cap-nhat/{id}', 'QuanTriVienController@edit')->name('cap-nhat');
+            Route::post('/cap-nhat/{id}', 'QuanTriVienController@update')->name('xu-ly-cap-nhat');
+            //Xoá admin
+            Route::get('/quan-tri-vien-da-xoa', 'QuanTriVienController@restoreIndex')->name('quan-tri-vien-da-xoa');
+            Route::get('/khoi-phuc/{id}', 'QuanTriVienController@restore')->name('khoi-phuc');
+            Route::get('/xoa/{id}', 'QuanTriVienController@softDeletes')->name('xoa');
+            Route::get('/xoa-bo/{id}', 'QuanTriVienController@destroy')->name('xoa-bo');
+            });
+        });
+
     Route::prefix('linh-vuc')->group(function(){
         Route::name('linh-vuc.')->group(function(){
             //Danh sách lĩnh vực

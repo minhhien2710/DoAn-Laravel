@@ -6,6 +6,10 @@
                     <i class="fas fa-tachometer-alt"></i>Dashboard</a>
             </li>
             <li>
+                <a href="{{ route('quan-tri-vien.danh-sach') }}">
+                    <i class="fa fa-credit-card" aria-hidden="true"></i>Admin</a>
+            </li>
+            <li>
                 <a href="{{ route('linh-vuc.danh-sach') }}">
                     <i class="fa fa-th-large" aria-hidden="true"></i></i>Lĩnh vực</a>
             </li>
