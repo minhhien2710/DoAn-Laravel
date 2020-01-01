@@ -24,14 +24,16 @@ class DangNhapRequest extends FormRequest
     public function rules()
     {
         return [
-            'mat_khau' => 'required|min:4'
+            'ten_dang_nhap' => 'required',
+            'mat_khau' => 'required'
         ];
     }
 
     public function messages()
     {
         return [
-            'mat_khau.min' => 'Mật khẩu tối thiểu 4 ký tự.'
+            'ten_dang_nhap.required' => 'Tài khoản không được để trống.',
+            'mat_khau.required' => 'Mật khẩu không được để trống.'
         ];
     }
 }

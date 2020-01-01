@@ -30,7 +30,7 @@
                     <div class="card-body card-block">
                         <div class="form-group">
                             <label for="ten_linh_vuc" class="pr-1  form-control-label">Tên lĩnh vực</label>
-                            <input type="text" id="ten_linh_vuc" name="ten_linh_vuc" placeholder="Ví dụ: Thể thao" required="" class="form-control">
+                            <input type="text" id="ten_linh_vuc" name="ten_linh_vuc" placeholder="Ví dụ: Thể thao" class="form-control">
                         </div>
                     </div>
                     <div class="card-footer">

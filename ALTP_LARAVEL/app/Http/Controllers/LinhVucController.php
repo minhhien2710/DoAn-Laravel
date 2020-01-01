@@ -80,6 +80,7 @@ class LinhVucController extends Controller
         $dsLinhVuc = LinhVuc::find($id);
         $dsLinhVuc->ten_linh_vuc=$request->ten_linh_vuc;
         $dsLinhVuc->save();
+        Alert::success('Cập nhật thành công!', 'Nhấn OK để tiếp tục!');
         return redirect()->route('linh-vuc.danh-sach');
     }
 
@@ -91,7 +92,6 @@ class LinhVucController extends Controller
      */
     public function destroy($id)
     {
-
         $linh_vuc=new LinhVuc;
         $linh_vuc=LinhVuc::onlyTrashed()->find($id);
         $linh_vuc->forceDelete();    
@@ -101,7 +101,7 @@ class LinhVucController extends Controller
     {
         $linh_vuc=new LinhVuc;
         $linh_vuc=LinhVuc::find($id);
-        $linh_vuc->delete();    
+        $linh_vuc->delete();
         return redirect(route('linh-vuc.danh-sach'));
 
     }
@@ -115,7 +115,7 @@ class LinhVucController extends Controller
     {
         $linh_vuc=new LinhVuc;
         $linh_vuc=LinhVuc::onlyTrashed()->find($id);
-        $linh_vuc->restore();    
+        $linh_vuc->restore();
         return redirect(route('linh-vuc.danh-sach'));
     }
 }

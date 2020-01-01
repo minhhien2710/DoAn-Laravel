@@ -28,7 +28,7 @@ class ThemCauHoiRequest extends FormRequest
             'phuong_an_a' => 'required',
             'phuong_an_b' => 'required',
             'phuong_an_c' => 'required',
-            'phuong_an_d' => 'required',
+            'phuong_an_d' => 'required'
         ];
     }
     public function messages()

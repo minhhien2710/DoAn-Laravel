@@ -29,11 +29,10 @@
                                                 <i class="zmdi zmdi-undo"></i>
                                             </button>
                                         </a>
-                                        <a href="{{ route('linh-vuc.xoa-bo',($linhVuc->id)) }}">
-                                            <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
-                                                <i class="zmdi zmdi-delete"></i>
-                                            </button>
-                                        </a>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" onclick=confirmDelete()>
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                        <input id="idxoa" type="hidden" value="{{ route('linh-vuc.xoa-bo',($linhVuc->id)) }}" />
                                     </div>
                                 </td>
                             </tr>
@@ -44,4 +43,27 @@
             </div>
         </div>
     </div>
+    <script>
+        function confirmDelete()
+        {
+            Swal.fire({
+                title: 'Bạn có chắc chứ?',
+                text: "Bạn sẽ không thể khôi phục lại!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Vâng, xóa nó đi!',
+                cancelButtonText: 'Huỷ bỏ!'
+            }).then((result) => {
+            if (result.value) {
+                Swal.fire(
+                'Đã xoá!',
+                'Xoá thành công.',
+                'success'
+                )
+                window.location = document.getElementById("idxoa").value;
+            }})
+        }
+    </script>
 @endsection
