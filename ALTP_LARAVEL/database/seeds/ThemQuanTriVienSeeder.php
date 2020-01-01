@@ -14,7 +14,8 @@ class ThemQuanTriVienSeeder extends Seeder
         App\QuanTriVien::create([
             'ten_dang_nhap' => 'admin',
             'mat_khau'      => Hash::make('3hteam'),
-            'ho_ten'        => 'Quan Tri Vien'
+            'ho_ten'        => 'Quan Tri Vien',
+            'anh_dai_dien'  => ''
         ]);
     }
 }
