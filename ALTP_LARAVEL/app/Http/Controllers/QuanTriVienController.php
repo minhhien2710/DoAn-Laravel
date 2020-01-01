@@ -76,7 +76,7 @@ class QuanTriVienController extends Controller
 
         $admin = new QuanTriVien;
         $admin->ten_dang_nhap = $request->ten_dang_nhap;
-        $admin->mat_khau = $request->mat_khau;
+        $admin->mat_khau = Hash::make($request->mat_khau);
         $admin->ho_ten = $request->ho_ten;
         if($request->hasFile('anh_dai_dien')){
             $this->validate($request, 

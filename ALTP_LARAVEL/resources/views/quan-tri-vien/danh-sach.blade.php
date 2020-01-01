@@ -9,13 +9,7 @@
                 <i class="zmdi zmdi-plus"></i>Thêm mới
             </button>
         </a>
-        <a href="{{ route('quan-tri-vien.quan-tri-vien-da-xoa') }}" >
-            <button class="au-btn au-btn-icon au-btn--green" >
-                <i class="fa fa-trash" aria-hidden="true"></i> Quản trị viên đã xoá
-            </button>
-        </a>
         </span>
-
     </div>
     <div class="col-md-12">
         <div class="table-responsive table-responsive-data2">
@@ -26,25 +20,15 @@
                         <th style="color: #fff;">Tên đăng nhập</th>
                         <th style="color: #fff;">Họ tên</th>
                         <th style="color: #fff;">Ảnh đại diện</th>
-                        <th style="color: #fff;"></th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($dsAdmin as $admin)
                     <tr class="tr-shadow">
-                        <td>{{ $admin ->id }}</td>
+                        <td style="padding-top: 3.5%">{{ $admin ->id }}</td>
                         <td>{{ $admin ->ten_dang_nhap }}</td>
                         <td>{{ $admin ->ho_ten }}</td>
-                        <td><img src="images/admin_avatar/{{$admin ->anh_dai_dien}}" alt="avatar" style="max-width: 100%"></td>
-                        <td>
-                            <div class="table-data-feature">
-                                <a href="{{ route('quan-tri-vien.xoa',($admin->id)) }}">
-                                    <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
-                                        <i class="zmdi zmdi-delete"></i>
-                                    </button>
-                                </a>
-                            </div>
-                        </td>
+                        <td><img src="images/admin_avatar/{{$admin ->anh_dai_dien}}" alt="avatar" style="max-width: 10%"></td>
                     </tr>
                     <tr class="spacer"></tr>
                     @endforeach

@@ -17,7 +17,7 @@ class LinhVucController extends Controller
     {
         //Load ds lĩnh vực
         $dsLinhVuc = LinhVuc::all();
-        return view('ds-linh-vuc', compact('dsLinhVuc'));
+        return view('linh-vuc.ds-linh-vuc', compact('dsLinhVuc'));
     }
 
     /**
@@ -27,7 +27,7 @@ class LinhVucController extends Controller
      */
     public function create()
     {
-        return view('them-moi-linh-vuc');
+        return view('linh-vuc.them-moi-linh-vuc');
     }
 
     /**
@@ -65,7 +65,7 @@ class LinhVucController extends Controller
     public function edit($id)
     {
         $dsLinhVuc = LinhVuc::find($id);
-        return view('cap-nhat-linh-vuc', compact('dsLinhVuc'));
+        return view('linh-vuc.cap-nhat-linh-vuc', compact('dsLinhVuc'));
     }
 
     /**
@@ -109,7 +109,7 @@ class LinhVucController extends Controller
     public function restoreIndex()
     {
         $linh_vuc=LinhVuc::onlyTrashed()->get();
-        return view('linh-vuc-da-xoa', compact('linh_vuc'));
+        return view('linh-vuc.linh-vuc-da-xoa', compact('linh_vuc'));
     }
     public function restore($id)
     {

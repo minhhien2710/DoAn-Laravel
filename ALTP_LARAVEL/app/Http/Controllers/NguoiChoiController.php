@@ -15,7 +15,7 @@ class NguoiChoiController extends Controller
     public function index()
     {
         $dsNguoiChoi = NguoiChoi::all();
-        return view('ds-users', compact('dsNguoiChoi'));
+        return view('user.ds-users', compact('dsNguoiChoi'));
     }
 
     /**
@@ -25,7 +25,7 @@ class NguoiChoiController extends Controller
      */
     public function create()
     {
-        return view('them-moi-user');
+        //
     }
 
     /**
@@ -85,8 +85,7 @@ class NguoiChoiController extends Controller
      */
     public function edit($id)
     {
-         $dsNguoiChoi = NguoiChoi::find($id);
-        return view('cap-nhat-user', compact('dsNguoiChoi'));
+        //
     }
 
     /**
@@ -98,13 +97,7 @@ class NguoiChoiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = NguoiChoi::find($id);
-        $user->ten_dang_nhap = $request->ten_dang_nhap;
-        $user->mat_khau = $request->mat_khau;
-        $user->email = $request->email;
-        $user->anh_dai_dien = $request->anh_dai_dien;
-        $user->save();
-        return redirect()->Route('user.danh-sach');
+        //
     }
 
     /**
@@ -131,7 +124,7 @@ class NguoiChoiController extends Controller
     public function restoreIndex()
     {
         $dsNguoiChoi=NguoiChoi::onlyTrashed()->get();
-        return view('ds-users-da-xoa', compact('dsNguoiChoi'));
+        return view('user.ds-users-da-xoa', compact('dsNguoiChoi'));
     }
     public function restore($id)
     {

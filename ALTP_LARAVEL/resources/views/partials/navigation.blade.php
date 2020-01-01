@@ -6,22 +6,20 @@
                     <i class="fas fa-tachometer-alt"></i>Dashboard</a>
             </li>
             <li>
-                <a href="{{ route('quan-tri-vien.danh-sach') }}">
-                    <i class="fa fa-credit-card" aria-hidden="true"></i>Admin</a>
-            </li>
-            <li>
                 <a href="{{ route('linh-vuc.danh-sach') }}">
                     <i class="fa fa-th-large" aria-hidden="true"></i></i>Lĩnh vực</a>
             </li>
-            
             <li>
                 <a href="{{ route('cau-hoi.danh-sach') }}">
                         <i class="fa fa-list-ol" aria-hidden="true"></i></i>Câu hỏi</a>
             </li>
-
+            <li>
+                <a href="{{ route('quan-tri-vien.danh-sach') }}">
+                    <i class="fa fa-user" aria-hidden="true"></i>Admin</a>
+            </li>
             <li>
                 <a href="{{ route('user.danh-sach') }}">
-                    <i class="fa fa-user" aria-hidden="true"></i>Người chơi</a>
+                    <i class="fa fa-users" aria-hidden="true"></i></i>Người chơi</a>
             </li>
             <li>
                 <a href="{{ route('luot-choi.danh-sach') }}">

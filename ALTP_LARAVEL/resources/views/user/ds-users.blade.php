@@ -32,7 +32,7 @@
                                 <td style="padding-top: 4%">{{ $user ->id }}</td>
                                 <td>{{ $user ->ten_dang_nhap }}</td>
                                 <td>{{ $user ->email }}</td>
-                                <td><img src="images/avatar/{{$user ->anh_dai_dien}}" alt="avatar" style="max-width: 100%"></td>
+                                <td><img src="images/avatar/{{$user ->anh_dai_dien}}" alt="avatar" style="max-width: 10%"></td>
                                 <td>{{ $user ->diem_cao_nhat }}</td>
                                 <td>{{ $user ->credit }}</td>
                                 <td>
