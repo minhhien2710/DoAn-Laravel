@@ -17,4 +17,16 @@ class LinhVucController extends Controller
 
         return response()->json($result);
     }
+
+    public function layLinhVuc(Request $request){
+        $linhVucID = $request->query('id');
+        $linhVuc = LinhVuc::where('id', $linhVucID)->get();
+        
+        $result = [
+            'success' => true,
+            'data'    => $linhVuc
+        ];
+
+        return response()->json($result);
+    }
 }
