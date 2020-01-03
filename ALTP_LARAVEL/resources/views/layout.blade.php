@@ -101,7 +101,7 @@
                                             </div>
                                             <div class="account-dropdown__body">
                                                 <div class="account-dropdown__item">
-                                                    <a href="{{ route('profile.thong-tin',6) }}">
+                                                    <a href="{{ route('profile.thong-tin',2) }}">
                                                         <i class="zmdi zmdi-account"></i>My Account</a>
                                                 </div>
                                             </div>

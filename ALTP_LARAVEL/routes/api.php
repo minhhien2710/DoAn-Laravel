@@ -28,3 +28,4 @@ Route::middleware(['assign.guard:api', 'jwt.auth'])->group(function(){
 Route::get('linh_vuc','API\LinhVucController@layDanhSach');
 Route::get('linh-vuc','API\LinhVucController@layLinhVuc');
 Route::get('cau-hoi','API\CauHoiController@layCauHoi');
+Route::get('cau-hinh-app/thoi-gian-tra-loi','API\CauHinhAppController@layThoiGianTraLoi');
