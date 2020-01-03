@@ -102,7 +102,7 @@
                                             </div>
                                             <div class="account-dropdown__body">
                                                 <div class="account-dropdown__item">
-                                                    <a href="{{ asset('#') }}">
+                                                    <a href="">
                                                         <i class="zmdi zmdi-account"></i>My Account</a>
                                                 </div>
                                             </div>

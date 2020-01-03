@@ -17,5 +17,12 @@ class ThemQuanTriVienSeeder extends Seeder
             'ho_ten'        => 'Quan Tri Vien',
             'anh_dai_dien'  => ''
         ]);
+
+        App\QuanTriVien::create([
+            'ten_dang_nhap' => 'mh2710',
+            'mat_khau'      => Hash::make('123123'),
+            'ho_ten'        => 'Minh Hiến',
+            'anh_dai_dien'  => '01-46-51_02-01-2020_55167948.jpg'
+        ]);
     }
 }

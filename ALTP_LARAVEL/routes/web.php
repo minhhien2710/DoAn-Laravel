@@ -11,16 +11,17 @@
 |
 */
 
-//Đăng nhập
-Route::get('dang-nhap', 'QuanTriVienController@dangNhap')->name('dang-nhap')->middleware('guest');
-Route::post('dang-nhap', 'QuanTriVienController@xuLyDangNhap')->name('xu-ly-dang-nhap');
-//Đăng xuất
-Route::get('dang-xuat', 'QuanTriVienController@dangXuat')->name('dang-xuat');
+Route::middleware('guest:web')->group(function(){
+    //Đăng nhập
+    Route::get('dang-nhap', 'QuanTriVienController@dangNhap')->name('dang-nhap');
+    Route::post('dang-nhap', 'QuanTriVienController@xuLyDangNhap')->name('xu-ly-dang-nhap');
+});
 
-Route::middleware('auth')->group(function(){
-    Route::get('/', function () {
-        return view('layout');
-    })->name('trang-chu');
+Route::middleware('auth:web')->group(function(){
+    //Trang chủ
+    Route::get('/', 'HomeController@trangChu')->name('trang-chu');
+    //Đăng xuất
+    Route::get('dang-xuat', 'QuanTriVienController@dangXuat')->name('dang-xuat');
 
     Route::prefix('quan-tri-vien')->group(function(){
         Route::name('quan-tri-vien.')->group(function(){
@@ -128,6 +129,17 @@ Route::middleware('auth')->group(function(){
             //Cập nhập cấu hình app
             Route::get('/cap-nhat/{id}', 'CauHinhAppController@edit')->name('cap-nhat');
             Route::post('/cap-nhat/{id}', 'CauHinhAppController@update')->name('xu-ly-cap-nhat');
+        });
+    });
+
+    Route::prefix('profile')->group(function(){
+        Route::name('profile.')->group(function(){
+            Route::get('/{id}', 'QuanTriVienController@xemthongtin')->name('thong-tin');
+            //Cập nhập thong tin ADMIN
+            Route::get('/cap-nhat/{id}', 'QuanTriVienController@edit')->name('cap-nhat');
+            Route::post('/cap-nhat/{id}', 'QuanTriVienController@update')->name('xu-ly-cap-nhat');
+            //Xoá tài khoản ADMIN
+            Route::get('/xoa-bo/{id}', 'QuanTriVienController@destroy')->name('xoa-bo');
         });
     });
 

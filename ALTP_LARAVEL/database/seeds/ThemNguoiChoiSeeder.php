@@ -11,8 +11,22 @@ class ThemNguoiChoiSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('nguoi_choi')->insert([
-            ['ten_dang_nhap'=>'henrylu489','mat_khau'=>'matkhaulasao','email'=>'quochuy090698@gmail.com','anh_dai_dien'=>'','diem_cao_nhat'=>99999999,'credit'=>99999]
+        App\NguoiChoi::create([
+            'ten_dang_nhap' => 'user1',
+            'mat_khau'      => Hash::make('123123'),
+            'email'         => 'user1@gmail.com',
+            'anh_dai_dien'  => '',
+            'diem_cao_nhat' => 0,
+            'credit'        => 0
+        ]);
+
+        App\NguoiChoi::create([
+            'ten_dang_nhap' => 'user2',
+            'mat_khau'      => Hash::make('123123'),
+            'email'         => 'user2@gmail.com',
+            'anh_dai_dien'  => '',
+            'diem_cao_nhat' => 0,
+            'credit'        => 0
         ]);
     }
 }

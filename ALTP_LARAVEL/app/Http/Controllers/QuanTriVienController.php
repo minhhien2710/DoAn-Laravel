@@ -18,18 +18,21 @@ class QuanTriVienController extends Controller
     }
     public function xuLyDangNhap(DangNhapRequest $request)
     {
-        $ten_dang_nhap = $request->ten_dang_nhap;
-        $mat_khau = $request->mat_khau;
+        $credentials = [
+            'ten_dang_nhap' => $request->ten_dang_nhap,
+            'password'      => $request->mat_khau
+        ];
 
-        if(Auth::attempt(['ten_dang_nhap' => $ten_dang_nhap, 'password' => $mat_khau])){
-            Alert::success('Đăng nhập thành công!', 'Nhấn OK để tiếp tục!');
-            return redirect()->route('trang-chu');
-        }
-        else
-        {
+        #Chứng thực
+        if(!auth('web')->attempt($credentials)) {
+            #Sai tên đăng nhập hoặc mật khẩu
             Alert::error('Đăng nhập thất bại!', 'Vui lòng kiểm tra lại thông tài khoản!');
             return redirect()->back();
         }
+
+        #Chứng thực thành công
+        Alert::success('Đăng nhập thành công!', 'Nhấn OK để tiếp tục!');
+        return redirect()->route('trang-chu');
     }
 
     public function layThongTin() {
@@ -37,7 +40,7 @@ class QuanTriVienController extends Controller
     }
 
     public function dangXuat() {
-        Auth::logout();
+        auth('web')->logout();
         Alert::success('Đăng xuất thành công!','');
         return redirect()->route('dang-nhap');
     }
@@ -116,9 +119,22 @@ class QuanTriVienController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function xemthongtin($id)
+    {
+        $dsQuanTriVien = QuanTriVien::find($id);
+        return view('profile.thong-tin', compact('dsQuanTriVien'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+
     public function edit($id)
     {
-    
+
     }
 
     /**
@@ -128,6 +144,7 @@ class QuanTriVienController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, $id)
     {
         
@@ -139,31 +156,9 @@ class QuanTriVienController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function destroy($id)
     {
-        $admin=new QuanTriVien;
-        $admin=QuanTriVien::onlyTrashed()->find($id);
-        $admin->forceDelete();    
-        return redirect(route('quan-tri-vien.quan-tri-vien-da-xoa'));
-    }
-    public function softDeletes($id)
-    {
-        $admin=new QuanTriVien;
-        $admin=QuanTriVien::find($id);
-        $admin->delete();    
-        return redirect(route('quan-tri-vien.danh-sach'));
-
-    }
-    public function restoreIndex()
-    {
-        $dsAdmin=QuanTriVien::onlyTrashed()->get();
-        return view('quan-tri-vien.quan-tri-vien-da-xoa', compact('dsAdmin'));
-    }
-    public function restore($id)
-    {
-        $admin=new QuanTriVien;
-        $admin=QuanTriVien::onlyTrashed()->find($id);
-        $admin->restore();    
-        return redirect(route('quan-tri-vien.danh-sach'));
+        //
     }
 }
