@@ -26,7 +26,7 @@ class QuanTriVienController extends Controller
         #Chứng thực
         if(!auth('web')->attempt($credentials)) {
             #Sai tên đăng nhập hoặc mật khẩu
-            Alert::error('Đăng nhập thất bại!', 'Vui lòng kiểm tra lại thông tài khoản!');
+            Alert::error('Đăng nhập thất bại!', 'Vui lòng kiểm tra lại thông tin tài khoản!');
             return redirect()->back();
         }
 
@@ -36,7 +36,7 @@ class QuanTriVienController extends Controller
     }
 
     public function layThongTin() {
-        return Auth::user();
+        return auth('web')->user();
     }
 
     public function dangXuat() {
@@ -157,8 +157,11 @@ class QuanTriVienController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function destroy($id)
+    public function softDeletes($id)
     {
-        //
+        $admin = new QuanTriVien;
+        $admin = QuanTriVien::find($id);
+        $admin -> delete();    
+        return redirect(route('trang-chu'));
     }
 }

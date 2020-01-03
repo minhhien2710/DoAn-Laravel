@@ -9,6 +9,7 @@ class QuanTriVien extends Authenticatable
 {
     use SoftDeletes;
     protected $table = 'quan_tri_vien';
+    protected $hidden = 'mat_khau';
 
     public function getPasswordAttribute()
     {

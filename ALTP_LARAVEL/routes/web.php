@@ -139,7 +139,7 @@ Route::middleware('auth:web')->group(function(){
             Route::get('/cap-nhat/{id}', 'QuanTriVienController@edit')->name('cap-nhat');
             Route::post('/cap-nhat/{id}', 'QuanTriVienController@update')->name('xu-ly-cap-nhat');
             //Xoá tài khoản ADMIN
-            Route::get('/xoa-bo/{id}', 'QuanTriVienController@destroy')->name('xoa-bo');
+            Route::get('/xoa/{id}', 'QuanTriVienController@softDeletes')->name('xoa');
         });
     });
 

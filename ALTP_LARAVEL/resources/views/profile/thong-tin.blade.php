@@ -35,7 +35,7 @@
                 <button class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" onclick=confirmDelete()>
                     Delete
                 </button>
-                <input id="idxoa" type="hidden" value="{{ route('profile.xoa-bo',($dsQuanTriVien->id)) }}" />
+                <input id="idxoa" type="hidden" value="{{ route('profile.xoa',($dsQuanTriVien->id)) }}" />
             </div>
         </div>
     </div>

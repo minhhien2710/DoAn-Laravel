@@ -68,7 +68,6 @@
             <!-- HEADER DESKTOP-->
             <header class="header-desktop">
                 <div class="section__content section__content--p30">
-
                     <div class="container-fluid">
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
@@ -81,28 +80,28 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="{{ asset('images/icon/avatar-01.jpg') }}" alt="John Dog">
+                                            <img src="{{ asset('images/admin_avatar/01-46-51_02-01-2020_55167948.jpg') }}" alt="Minh Hiến">
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="{{ asset('#') }}">john dog</a>
+                                            <a class="js-acc-btn" href="{{ asset('#') }}">Minh Hiến</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="{{ asset('#') }}">
-                                                        <img src="{{ asset('images/icon/avatar-01.jpg') }}" alt="John Dog">
+                                                        <img src="{{ asset('images/admin_avatar/01-46-51_02-01-2020_55167948.jpg') }}" alt="Minh Hiến">
                                                     </a>
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="{{ asset('#') }}">john dog</a>
+                                                        <a href="{{ asset('#') }}">Minh Hiến</a>
                                                     </h5>
-                                                    <span class="email">johndog@example.com</span>
+                                                    <span class="taikhoan">mh2710</span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
                                                 <div class="account-dropdown__item">
-                                                    <a href="">
+                                                    <a href="{{ route('profile.thong-tin',6) }}">
                                                         <i class="zmdi zmdi-account"></i>My Account</a>
                                                 </div>
                                             </div>
