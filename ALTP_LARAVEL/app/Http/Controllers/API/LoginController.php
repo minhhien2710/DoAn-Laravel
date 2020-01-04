@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\NguoiChoi;
 
 class LoginController extends Controller
 {
@@ -30,7 +31,7 @@ class LoginController extends Controller
             'token'     => $token
         ], 200);
     }
-
+  
     public function layThongTin()
     {
         return auth('api')->user();
