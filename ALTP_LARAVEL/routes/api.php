@@ -31,3 +31,4 @@ Route::get('cau-hoi','API\CauHoiController@layCauHoi');
 Route::get('cau-hinh-app/thoi-gian-tra-loi','API\CauHinhAppController@layThoiGianTraLoi');
 Route::get('goi_credit','API\GoiCreditController@layDanhSach');
 Route::get('goi-credit','API\GoiCreditController@layGoiCredit');
+Route::post('nguoi-choi/them-nguoi-choi','API\DangKiController@store');
